@@ -10,7 +10,12 @@ export default class FooterComponent extends HTMLElement {
 
     return `
       <style>
-        /* CSS will go here */
+        footer {
+          background-color: var(--spectrum-cyan-800);
+        }
+        h4 {
+          margin-left: 8px;
+        }
       </style>
 
       <footer>

@@ -2,3 +2,11 @@
 @import "@spectrum-css/typography/dist/index.css";
 @import "@spectrum-css/page/dist/index.css";
 @import "@spectrum-css/icon/dist/index.css";
+
+body {
+  margin: 0;
+  padding: 0px;
+}
+main {
+  margin-left: 8px;
+}

@@ -7,10 +7,18 @@
       data-gwd-opt="static"
       src="/components/footer.ts"
     ></script>
+    <script
+      type="module"
+      data-gwd-opt="static"
+      src="/components/header.ts"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   </head>
   <body>
-    <page-outlet></page-outlet>
-
+    <app-header></app-header>
+    <main>
+      <page-outlet></page-outlet>
+    </main>
     <app-footer></app-footer>
   </body>
 </html>
