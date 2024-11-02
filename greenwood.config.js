@@ -1,18 +1,14 @@
 import { greenwoodPluginTypeScript } from "@greenwood/plugin-typescript";
 import { greenwoodPluginPostCss } from "@greenwood/plugin-postcss";
 import { greenwoodPluginImportCss } from "@greenwood/plugin-import-css";
-import { greenwoodPluginRendererLit } from "@greenwood/plugin-renderer-lit";
 
 export default {
-  prerender: true,
+  prerender: false,
   plugins: [
-    greenwoodPluginTypeScript({
+    greenwoodPluginTypeScript(),
+    greenwoodPluginPostCss({
       extendConfig: true,
     }),
-    greenwoodPluginPostCss(),
-    greenwoodPluginImportCss({
-      extendConfig: true,
-    }),
-    greenwoodPluginRendererLit(),
+    greenwoodPluginImportCss(),
   ],
 };
