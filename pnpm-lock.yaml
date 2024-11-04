@@ -54,6 +54,9 @@ importers:
       '@greenwood/plugin-typescript':
         specifier: ^0.30.0
         version: 0.30.0(@greenwood/cli@0.30.0)
+      '@iconify/types':
+        specifier: ^2.0.0
+        version: 2.0.0
       '@types/postcss-import':
         specifier: ^14.0.3
         version: 14.0.3
