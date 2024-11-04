@@ -1,6 +1,3 @@
-// @ts-expect-error
-import * as iconify from "iconify-icon";
-
 export default class HeaderComponent extends HTMLElement {
   connectedCallback() {
     this.innerHTML = this.getTemplate();

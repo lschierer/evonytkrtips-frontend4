@@ -3,23 +3,33 @@
     "strict": true,
     "target": "ES2023",
     "module": "ES2022",
-    "moduleResolution": "node",
+    "baseUrl": ".",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true,
     "experimentalDecorators": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Bundler",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"]
+    },
     "plugins": [
       {
         "name": "ts-lit-plugin",
         "strict": true
-      }
+      },
+      { "name": "typescript-plugin-css-modules" }
     ]
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "src/styles/*.css"]
 }
