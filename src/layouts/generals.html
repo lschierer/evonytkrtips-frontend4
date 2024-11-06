@@ -7,13 +7,18 @@
   <head>
     <meta property="og:title" content="${globalThis.page.title}" />
     <meta property="og:site_name" content="Evony TKR Tips" />
-  </head>
-  <body>
     <script
       type="module"
-      data-gwd-opt="none"
-      src="../components/card.ts"
+      data-gwd-opt="default"
+      src="/components/splash-cardgrid.ts"
     ></script>
+    <script
+      type="module"
+      data-gwd-opt="default"
+      src="/components/card.ts"
+    ></script>
+  </head>
+  <body>
     <content-outlet></content-outlet>
     test
     <splash-cardgrid></splash-cardgrid>

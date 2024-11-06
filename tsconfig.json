@@ -1,9 +1,10 @@
 {
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
     "strict": true,
     "composite": true,
     "target": "es2023",
-    "module": "ES2022",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "baseUrl": ".",
     "rootDir": ".",
@@ -29,5 +30,5 @@
       { "name": "typescript-plugin-css-modules" }
     ]
   },
-  "include": ["src/**/*.ts", "src/styles/*.css"]
+  "include": ["src/**/*.mts", "src/**/*.ts", "src/styles/*.css"]
 }

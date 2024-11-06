@@ -1,23 +1,26 @@
-const debug = 1;
+import { LitElement, html } from "lit-element";
+import { customElement } from "lit/decorators.js";
+
+//@ts-ignore
+//import HorizontalCard from "/components/card.ts";
+
+const DEBUG = 1;
 
 type Section = {
   title: string;
   name: string;
   description?: string;
 };
+
 export const isolation = true;
 export const hydration = true;
 export const prerender = false;
 
-export default class SplashCardGrid extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = this.getTemplate().innerHTML;
-  }
-
-  getTemplate() {
-    const template = document.createElement("template");
-    if (debug) {
-      console.log(`SplashCardGrid connectedCallback started`);
+@customElement("splash-cardgrid")
+export default class SplashCardGrid extends LitElement {
+  protected render() {
+    if (DEBUG) {
+      console.log(`SplashCardGrid render start`);
     }
     const sections: Section[] = [
       {
@@ -38,33 +41,20 @@ export default class SplashCardGrid extends HTMLElement {
       { title: "Reference", name: "ion:library-outline" },
     ];
 
-    if (!this.shadowRoot) {
-      template.innerHTML = `
-
-          <div class="cardGrid" role="grid">
-            ${sections
-              .map((section) => {
-                return `
-                <horizontal-card
-                  title="${section.title}"
-                  iconName="${section.name}"
-                  iconHeight="1.2rem"
-                  iconWidth="1.2rem"
-                  description="${
-                    section.description ? section.description : null
-                  } "
-                ></horizontal-card>
-              `;
-              })
-              .join("")}
-          </div>
-        `;
-      const shadowRoot = this.attachShadow({ mode: "open" });
-      shadowRoot.appendChild(template.content.cloneNode(true));
-      return shadowRoot;
-    } else {
-      return template;
-    }
+    return html`
+      <div class="cardGrid" role="grid">
+        ${sections.map((section) => {
+          return html`
+            <horizontal-card
+              title="${section.title}"
+              iconName="${section.name}"
+              iconHeight="1.2rem"
+              iconWidth="1.2rem"
+              description="${section.description ? section.description : ""} "
+            ></horizontal-card>
+          `;
+        })}
+      </div>
+    `;
   }
 }
-customElements.define("splash-cardgrid", SplashCardGrid);

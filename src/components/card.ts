@@ -1,10 +1,19 @@
-import { LitElement, css, html, type CSSResultArray, nothing } from "lit";
+import {
+  LitElement,
+  /*css,
+  unsafeCSS,
+  type CSSResultArray,*/
+  type PropertyValues,
+  html,
+  nothing,
+} from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 
+/*
 import baseTheme from "../styles/theme.css" with { type: "css" };
 import SpectrumTokens from "../../node_modules/@spectrum-css/tokens/dist/index.css" with { type: "css" };
 import SpectrumCard from "../../node_modules/@spectrum-css/card/dist/index.css" with { type: "css" };
-import { unsafeCSS, type PropertyValues } from "@lit/reactive-element";
+*/
 const DEBUG = 1;
 
 export const isolation = true;
@@ -12,7 +21,7 @@ export const hydration = true;
 export const prerender = false;
 
 @customElement("horizontal-card")
-export class HorizontalCard extends LitElement {
+export default class HorizontalCard extends LitElement {
   @property({ type: String })
   public title: string = "";
 
@@ -62,6 +71,7 @@ export class HorizontalCard extends LitElement {
     }
   }
 
+  /*
   public static override get styles(): CSSResultArray {
     const baseThemeCss = unsafeCSS(baseTheme);
     const SpectrumTokensCss = unsafeCSS(SpectrumTokens);
@@ -79,8 +89,8 @@ export class HorizontalCard extends LitElement {
       return [SpectrumTokensCss, SpectrumCardCss, baseThemeCss, localStyle];
     }
   }
-
-  protected render() {
+  */
+  /*protected render() {
     let iconHTML = html``;
     if (this.iconName.length > 0) {
       iconHTML = html`
@@ -94,96 +104,29 @@ export class HorizontalCard extends LitElement {
         ></iconify-icon>
       `;
     }
-    return html`
-      <div class="spectrum spectrum--medium spectrum--light">
-        <a href="${this._targetUrl}">
-          <div
-            class="spectrum-Card spectrum-Card--horizontal"
-            tabindex="0"
-            role="figure"
-          >
-            <div class="spectrum-Card-preview">${iconHTML}</div>
-            <div class="spectrum-Card-body">
-              <div class="spectrum-Card-header">
-                <div
-                  class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS"
-                >
-                  ${this.title}
-                </div>
-              </div>
-              <div class="spectrum-Card-content">
-                <div class="spectrum-Card-description">${this.description}</div>
-              </div>
+    return html``;
+    /*html`
+      <div
+        class="spectrum-Card spectrum-Card--horizontal"
+        tabindex="0"
+        role="figure"
+      >
+        <div class="spectrum-Card-preview">${iconHTML}</div>
+        <div class="spectrum-Card-body">
+          <div class="spectrum-Card-header">
+            <div
+              class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS"
+            >
+              ${this.title}
             </div>
           </div>
-        </a>
-      </div>
-    `;
-  }
-}
-
-type Section = {
-  title: string;
-  name: string;
-  description?: string;
-};
-
-export default class SplashCardGrid extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = this.getTemplate().innerHTML;
-  }
-
-  getTemplate() {
-    const template = document.createElement("template");
-    if (DEBUG) {
-      console.log(`SplashCardGrid connectedCallback started`);
-    }
-    const sections: Section[] = [
-      {
-        title: "Generals",
-        name: "healthicons:officer-outline",
-        description: "All about picking generals.",
-      },
-      {
-        title: "Monsters",
-        name: "game-icons:fish-monster",
-        description: "All about hunting monsters.",
-      },
-      {
-        title: "SvS",
-        name: "mdi:sword-fight",
-        description: "All about participating in SvS.",
-      },
-      { title: "Reference", name: "ion:library-outline" },
-    ];
-
-    if (!this.shadowRoot) {
-      template.innerHTML = `
-
-          <div class="cardGrid" role="grid">
-            ${sections
-              .map((section) => {
-                return `
-                <horizontal-card
-                  title="${section.title}"
-                  iconName="${section.name}"
-                  iconHeight="1.2rem"
-                  iconWidth="1.2rem"
-                  description="${
-                    section.description ? section.description : null
-                  } "
-                ></horizontal-card>
-              `;
-              })
-              .join("")}
+          <div class="spectrum-Card-content">
+            <a href="${this._targetUrl}">
+              <div class="spectrum-Card-description">${this.description}</div>
+            </a>
           </div>
-        `;
-      const shadowRoot = this.attachShadow({ mode: "open" });
-      shadowRoot.appendChild(template.content.cloneNode(true));
-      return shadowRoot;
-    } else {
-      return template;
-    }
-  }
+        </div>
+      </div>
+    `;*/
+  //}
 }
-customElements.define("splash-cardgrid", SplashCardGrid);
