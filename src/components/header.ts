@@ -41,6 +41,7 @@ export default class HeaderComponent extends HTMLElement {
         }
 
         .nav {
+          margin-left: 5rem;
           width: 100;
           height: 100;
           flex-grow: 4;
@@ -58,7 +59,7 @@ export default class HeaderComponent extends HTMLElement {
 
       </style>
       `;
-    const sections = ["Generals", "Monsters"];
+    const sections = ["Generals", "Monsters", "SvS", "Reference"];
     return `${style}
       <header class="header">
         <div class="head-wrap">
