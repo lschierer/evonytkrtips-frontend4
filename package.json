@@ -1,23 +1,24 @@
 {
   "name": "evonytkrtips-frontend",
   "version": "4.0.0",
-  "type": "module",
-  "description": "Web Frontend for Evony TKR Tips",
-  "scripts": {
-    "develop": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js develop",
-    "build": "node  --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js build",
-    "serve": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js serve"
-  },
   "author": "Luke Schierer",
   "license": "ISC",
+  "description": "Web Frontend for Evony TKR Tips",
+  "type": "module",
+  "scripts": {
+    "dev": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js develop",
+    "build": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js build",
+    "serve": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js serve"
+  },
   "devDependencies": {
-    "@greenwood/cli": "^0.30.0",
+    "@greenwood/cli": "~0.30.0",
     "@greenwood/plugin-postcss": "^0.30.0",
     "@greenwood/plugin-renderer-lit": "^0.30.0",
     "@greenwood/plugin-typescript": "^0.30.0",
     "@iconify/types": "^2.0.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/postcss-import": "^14.0.3",
+    "@types/postcss-js": "^4.0.4",
     "@types/postcss-url": "^10.0.4",
     "@types/trusted-types": "^2.0.7",
     "autoprefixer": "^10.4.20",
@@ -28,6 +29,11 @@
     "postcss-nesting": "^13.0.1",
     "postcss-plugin": "^1.0.0",
     "postcss-url": "^10.1.3",
+    "prettier": "^3.3.3",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "ts-lit-plugin": "^2.0.2",
     "typescript-plugin-css-modules": "^5.1.0"
   },

@@ -15,7 +15,7 @@ type PageData = {
 
 const fetchList = async () => {
   const generalLists: GeneralList[] = await fetch(
-    "http://localhost:3000/generals.json",
+    "http://localhost:3000/generals.json"
   ).then((resp) => resp.json());
   const returnable: GeneralList[] = [];
   generalLists.map((generalList) => {
@@ -31,14 +31,14 @@ const sectionList = async (list: GeneralListItem[]) => {
     list.map(async (item) => {
       if (item.name !== undefined && item.id !== undefined) {
         const generalDetails: General = await fetch(
-          `http://localhost:3000/generals/byId/${general.id}.json`,
+          `http://localhost:3000/generals/byId/${general.id}.json`
         ).then((resp) => resp.json());
         const valid = generalSchema.safeParse(generalDetails);
         if (valid.success) {
           returnable.push(valid.data);
         }
       }
-    }),
+    })
   );
   return returnable;
 };

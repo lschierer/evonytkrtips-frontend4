@@ -1,11 +1,10 @@
 {
-  "extends": "@tsconfig/node20/tsconfig.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "strict": true,
     "composite": true,
     "target": "es2023",
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "Preserve",
     "baseUrl": ".",
     "rootDir": ".",
     "experimentalDecorators": true,
@@ -23,11 +22,11 @@
     "declarationDir": "./types",
     "verbatimModuleSyntax": true,
     "plugins": [
+      { "name": "typescript-plugin-css-modules", "useConfig": true },
       {
         "name": "ts-lit-plugin",
         "strict": true
-      },
-      { "name": "typescript-plugin-css-modules" }
+      }
     ]
   },
   "include": ["src/**/*.mts", "src/**/*.ts", "src/styles/*.css"]

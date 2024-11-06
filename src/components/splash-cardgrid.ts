@@ -1,9 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
 
-//@ts-ignore
-import HorizontalCard from "./card.ts";
-
 const DEBUG = 1;
 
 type Section = {
@@ -18,6 +15,10 @@ export const prerender = false;
 
 @customElement("splash-cardgrid")
 export default class SplashCardGrid extends LitElement {
+  protected createRenderRoot() {
+    return this;
+  }
+
   protected render() {
     if (DEBUG) {
       console.log(`SplashCardGrid render start`);

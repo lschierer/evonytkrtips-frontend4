@@ -17,3 +17,7 @@ Much of the information here comes from other authors' work on other sites. In p
 - [Theria Games](https://theriagames.com/evony-wiki/)
 - [One Chilled Gamer](https://onechilledgamer.com/)
 - [Evony The King's Return Guides](https://www.evonytkrguide.com/)
+
+---
+
+<splash-cardgrid></splash-cardgrid>
