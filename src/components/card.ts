@@ -1,15 +1,5 @@
-import {
-  LitElement,
-  type PropertyValues,
-  css,
-  unsafeCSS,
-  html,
-  nothing,
-  type CSSResultArray,
-} from "lit";
+import { LitElement, type PropertyValues, css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
-
-import baseTheme from "../styles/theme.css" with { type: "css" };
 
 export const isolation = true;
 export const hydration = true;
