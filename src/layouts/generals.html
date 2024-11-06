@@ -9,20 +9,19 @@
     <meta property="og:site_name" content="Evony TKR Tips" />
     <link
       rel="stylesheet"
-      href="/node_modules/@spectrum-css/card/dist/index.css"
+      href="/node_modules/@spectrum-css/sidenav/dist/index.css"
     />
+    <link rel="stylesheet" href="/styles/generals.css" />
   </head>
   <body>
-    <script
-      type="module"
-      data-gwd-opt="default"
-      src="/components/splash-cardgrid.ts"
-    ></script>
-    <script
-      type="module"
-      data-gwd-opt="default"
-      src="/components/card.ts"
-    ></script>
+    <nav>
+      <script
+        type="module"
+        data-gwd-opt="default"
+        src="/components/generalsSectionElements/side-nav.ts"
+      ></script>
+      <side-nav route="${globalThis.page.route}"></side-nav>
+    </nav>
     <main>
       <content-outlet></content-outlet>
     </main>
