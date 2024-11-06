@@ -1,1 +1,47 @@
-{"type":"object","required":["attack","defense","leadership","politics"],"properties":{"attack":{"type":"object","required":["base","increment","total"],"properties":{"base":{"type":"number","format":"float","minimum":0},"total":{"type":"number","format":"float","minimum":0},"increment":{"type":"number","format":"float","minimum":0}},"x-readme-ref-name":"BasicAttributesObject"},"defense":{"type":"object","required":["base","increment","total"],"properties":{"base":{"type":"number","format":"float","minimum":0},"total":{"type":"number","format":"float","minimum":0},"increment":{"type":"number","format":"float","minimum":0}},"x-readme-ref-name":"BasicAttributesObject"},"politics":{"type":"object","required":["base","increment","total"],"properties":{"base":{"type":"number","format":"float","minimum":0},"total":{"type":"number","format":"float","minimum":0},"increment":{"type":"number","format":"float","minimum":0}},"x-readme-ref-name":"BasicAttributesObject"},"leadership":{"type":"object","required":["base","increment","total"],"properties":{"base":{"type":"number","format":"float","minimum":0},"total":{"type":"number","format":"float","minimum":0},"increment":{"type":"number","format":"float","minimum":0}},"x-readme-ref-name":"BasicAttributesObject"}},"x-readme-ref-name":"BasicAttributes"}
+{
+  "type": "object",
+  "required": ["attack", "defense", "leadership", "politics"],
+  "properties": {
+    "attack": {
+      "type": "object",
+      "required": ["base", "increment", "total"],
+      "properties": {
+        "base": { "type": "number", "format": "float", "minimum": 0 },
+        "total": { "type": "number", "format": "float", "minimum": 0 },
+        "increment": { "type": "number", "format": "float", "minimum": 0 }
+      },
+      "x-readme-ref-name": "BasicAttributesObject"
+    },
+    "defense": {
+      "type": "object",
+      "required": ["base", "increment", "total"],
+      "properties": {
+        "base": { "type": "number", "format": "float", "minimum": 0 },
+        "total": { "type": "number", "format": "float", "minimum": 0 },
+        "increment": { "type": "number", "format": "float", "minimum": 0 }
+      },
+      "x-readme-ref-name": "BasicAttributesObject"
+    },
+    "politics": {
+      "type": "object",
+      "required": ["base", "increment", "total"],
+      "properties": {
+        "base": { "type": "number", "format": "float", "minimum": 0 },
+        "total": { "type": "number", "format": "float", "minimum": 0 },
+        "increment": { "type": "number", "format": "float", "minimum": 0 }
+      },
+      "x-readme-ref-name": "BasicAttributesObject"
+    },
+    "leadership": {
+      "type": "object",
+      "required": ["base", "increment", "total"],
+      "properties": {
+        "base": { "type": "number", "format": "float", "minimum": 0 },
+        "total": { "type": "number", "format": "float", "minimum": 0 },
+        "increment": { "type": "number", "format": "float", "minimum": 0 }
+      },
+      "x-readme-ref-name": "BasicAttributesObject"
+    }
+  },
+  "x-readme-ref-name": "BasicAttributes"
+}

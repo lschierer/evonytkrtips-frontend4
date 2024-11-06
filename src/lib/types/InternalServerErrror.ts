@@ -1,6 +1,6 @@
 export type InternalServerErrror = {
-    /**
-     * @type string
-    */
-    message: string;
+  /**
+   * @type string
+   */
+  message: string;
 };

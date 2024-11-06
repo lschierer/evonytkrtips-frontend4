@@ -1,1 +1,12 @@
-{"type":"object","required":[],"properties":{"base":{"type":"number"},"total":{"type":"number"},"increment":{"type":"number"}},"description":"A simplified representation of a BasicAttributesObject, typically used in list views.","x-fiddle-dto-info":{"baseSchemaName":"BasicAttributesObject"},"x-readme-ref-name":"BasicAttributesObjectSummary"}
+{
+  "type": "object",
+  "required": [],
+  "properties": {
+    "base": { "type": "number" },
+    "total": { "type": "number" },
+    "increment": { "type": "number" }
+  },
+  "description": "A simplified representation of a BasicAttributesObject, typically used in list views.",
+  "x-fiddle-dto-info": { "baseSchemaName": "BasicAttributesObject" },
+  "x-readme-ref-name": "BasicAttributesObjectSummary"
+}

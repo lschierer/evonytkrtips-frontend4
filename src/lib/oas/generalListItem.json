@@ -1,1 +1,9 @@
-{"type":"object","required":["name"],"properties":{"id":{"type":"string","format":"uuid","maxLength":100},"name":{"type":"string","maxLength":1000}},"x-readme-ref-name":"GeneralListItem"}
+{
+  "type": "object",
+  "required": ["name"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid", "maxLength": 100 },
+    "name": { "type": "string", "maxLength": 1000 }
+  },
+  "x-readme-ref-name": "GeneralListItem"
+}

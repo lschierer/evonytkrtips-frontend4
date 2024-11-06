@@ -1,1 +1,13 @@
-{"enum":["ground_specialist","ranged_specialist","mounted_specialist","siege_specialist","mayor","wall_general","officer"],"type":"string","x-readme-ref-name":"GeneralEvaluationTypes"}
+{
+  "enum": [
+    "ground_specialist",
+    "ranged_specialist",
+    "mounted_specialist",
+    "siege_specialist",
+    "mayor",
+    "wall_general",
+    "officer"
+  ],
+  "type": "string",
+  "x-readme-ref-name": "GeneralEvaluationTypes"
+}

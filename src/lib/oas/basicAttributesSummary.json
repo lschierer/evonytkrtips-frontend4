@@ -1,1 +1,57 @@
-{"type":"object","required":["attack","defense","leadership","politics"],"properties":{"attack":{"type":"object","required":[],"properties":{"base":{"type":"number"},"total":{"type":"number"},"increment":{"type":"number"}},"description":"A simplified representation of a BasicAttributesObject, typically used in list views.","x-fiddle-dto-info":{"baseSchemaName":"BasicAttributesObject"},"x-readme-ref-name":"BasicAttributesObjectSummary"},"defense":{"type":"object","required":[],"properties":{"base":{"type":"number"},"total":{"type":"number"},"increment":{"type":"number"}},"description":"A simplified representation of a BasicAttributesObject, typically used in list views.","x-fiddle-dto-info":{"baseSchemaName":"BasicAttributesObject"},"x-readme-ref-name":"BasicAttributesObjectSummary"},"politics":{"type":"object","required":[],"properties":{"base":{"type":"number"},"total":{"type":"number"},"increment":{"type":"number"}},"description":"A simplified representation of a BasicAttributesObject, typically used in list views.","x-fiddle-dto-info":{"baseSchemaName":"BasicAttributesObject"},"x-readme-ref-name":"BasicAttributesObjectSummary"},"leadership":{"type":"object","required":[],"properties":{"base":{"type":"number"},"total":{"type":"number"},"increment":{"type":"number"}},"description":"A simplified representation of a BasicAttributesObject, typically used in list views.","x-fiddle-dto-info":{"baseSchemaName":"BasicAttributesObject"},"x-readme-ref-name":"BasicAttributesObjectSummary"}},"description":"A summary of the values that the basic attributes have at a particular level, after they have been computed for that level. ","x-fiddle-dto-info":{"baseSchemaName":"BasicAttributes"},"x-readme-ref-name":"BasicAttributesSummary"}
+{
+  "type": "object",
+  "required": ["attack", "defense", "leadership", "politics"],
+  "properties": {
+    "attack": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "base": { "type": "number" },
+        "total": { "type": "number" },
+        "increment": { "type": "number" }
+      },
+      "description": "A simplified representation of a BasicAttributesObject, typically used in list views.",
+      "x-fiddle-dto-info": { "baseSchemaName": "BasicAttributesObject" },
+      "x-readme-ref-name": "BasicAttributesObjectSummary"
+    },
+    "defense": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "base": { "type": "number" },
+        "total": { "type": "number" },
+        "increment": { "type": "number" }
+      },
+      "description": "A simplified representation of a BasicAttributesObject, typically used in list views.",
+      "x-fiddle-dto-info": { "baseSchemaName": "BasicAttributesObject" },
+      "x-readme-ref-name": "BasicAttributesObjectSummary"
+    },
+    "politics": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "base": { "type": "number" },
+        "total": { "type": "number" },
+        "increment": { "type": "number" }
+      },
+      "description": "A simplified representation of a BasicAttributesObject, typically used in list views.",
+      "x-fiddle-dto-info": { "baseSchemaName": "BasicAttributesObject" },
+      "x-readme-ref-name": "BasicAttributesObjectSummary"
+    },
+    "leadership": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "base": { "type": "number" },
+        "total": { "type": "number" },
+        "increment": { "type": "number" }
+      },
+      "description": "A simplified representation of a BasicAttributesObject, typically used in list views.",
+      "x-fiddle-dto-info": { "baseSchemaName": "BasicAttributesObject" },
+      "x-readme-ref-name": "BasicAttributesObjectSummary"
+    }
+  },
+  "description": "A summary of the values that the basic attributes have at a particular level, after they have been computed for that level. ",
+  "x-fiddle-dto-info": { "baseSchemaName": "BasicAttributes" },
+  "x-readme-ref-name": "BasicAttributesSummary"
+}

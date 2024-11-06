@@ -1,1 +1,11 @@
-{"type":"object","required":["name"],"properties":{"id":{"type":"string","format":"uuid","maxLength":100},"name":{"type":"string","maxLength":100}},"description":"List Item version of the BuiltInBook","x-fiddle-dto-info":{"baseSchemaName":"BuiltinBook"},"x-readme-ref-name":"BuiltinBookListObject"}
+{
+  "type": "object",
+  "required": ["name"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid", "maxLength": 100 },
+    "name": { "type": "string", "maxLength": 100 }
+  },
+  "description": "List Item version of the BuiltInBook",
+  "x-fiddle-dto-info": { "baseSchemaName": "BuiltinBook" },
+  "x-readme-ref-name": "BuiltinBookListObject"
+}

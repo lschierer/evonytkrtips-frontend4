@@ -18,11 +18,41 @@ export type { GeneralEvaluationTypesSchema } from "./generalEvaluationTypesSchem
 export type { GeneralListItemSchema } from "./generalListItemSchema.js";
 export type { GeneralListSchema } from "./generalListSchema.js";
 export type { GeneralSchema } from "./generalSchema.js";
-export type { GeneralsHtmlListPathParamsSchema, GeneralsHtmlList200Schema, GeneralsHtmlList204Schema, GeneralsHtmlList400Schema, GeneralsHtmlList500Schema, GeneralsHtmlListQueryResponseSchema } from "./generalsHtmlListSchema.js";
+export type {
+  GeneralsHtmlListPathParamsSchema,
+  GeneralsHtmlList200Schema,
+  GeneralsHtmlList204Schema,
+  GeneralsHtmlList400Schema,
+  GeneralsHtmlList500Schema,
+  GeneralsHtmlListQueryResponseSchema,
+} from "./generalsHtmlListSchema.js";
 export type { GeneralSummarySchema } from "./generalSummarySchema.js";
-export type { GetABookByUuidPathParamsSchema, GetABookByUuid200Schema, GetABookByUuid204Schema, GetABookByUuid400Schema, GetABookByUuid404Schema, GetABookByUuid500Schema, GetABookByUuidQueryResponseSchema } from "./getABookByUuidSchema.js";
-export type { GetAllBooksPathParamsSchema, GetAllBooks200Schema, GetAllBooks204Schema, GetAllBooks400Schema, GetAllBooks500Schema, GetAllBooksQueryResponseSchema } from "./getAllBooksSchema.js";
-export type { GetGeneralByIdPathParamsSchema, GetGeneralByIdQueryParamsSchema, GetGeneralById200Schema, GetGeneralById400Schema, GetGeneralById404Schema, GetGeneralById500Schema, GetGeneralByIdQueryResponseSchema } from "./getGeneralByIdSchema.js";
+export type {
+  GetABookByUuidPathParamsSchema,
+  GetABookByUuid200Schema,
+  GetABookByUuid204Schema,
+  GetABookByUuid400Schema,
+  GetABookByUuid404Schema,
+  GetABookByUuid500Schema,
+  GetABookByUuidQueryResponseSchema,
+} from "./getABookByUuidSchema.js";
+export type {
+  GetAllBooksPathParamsSchema,
+  GetAllBooks200Schema,
+  GetAllBooks204Schema,
+  GetAllBooks400Schema,
+  GetAllBooks500Schema,
+  GetAllBooksQueryResponseSchema,
+} from "./getAllBooksSchema.js";
+export type {
+  GetGeneralByIdPathParamsSchema,
+  GetGeneralByIdQueryParamsSchema,
+  GetGeneralById200Schema,
+  GetGeneralById400Schema,
+  GetGeneralById404Schema,
+  GetGeneralById500Schema,
+  GetGeneralByIdQueryResponseSchema,
+} from "./getGeneralByIdSchema.js";
 export type { InternalServerErrrorSchema } from "./internalServerErrrorSchema.js";
 export type { NoContentSchema } from "./noContentSchema.js";
 export type { NotFoundSchema } from "./notFoundSchema.js";
@@ -36,7 +66,14 @@ export type { SpecialitySchema } from "./specialitySchema.js";
 export type { StandardBookListItemSchema } from "./standardBookListItemSchema.js";
 export type { StandardBookSchema } from "./standardBookSchema.js";
 export type { TargetedTypesSchema } from "./targetedTypesSchema.js";
-export type { UuidForTypeAndNamePathParamsSchema, UuidForTypeAndName200Schema, UuidForTypeAndName204Schema, UuidForTypeAndName400Schema, UuidForTypeAndName500Schema, UuidForTypeAndNameQueryResponseSchema } from "./uuidForTypeAndNameSchema.js";
+export type {
+  UuidForTypeAndNamePathParamsSchema,
+  UuidForTypeAndName200Schema,
+  UuidForTypeAndName204Schema,
+  UuidForTypeAndName400Schema,
+  UuidForTypeAndName500Schema,
+  UuidForTypeAndNameQueryResponseSchema,
+} from "./uuidForTypeAndNameSchema.js";
 export { ascendingLevelNamesSchema } from "./ascendingLevelNamesSchema.js";
 export { ascendingLevelSchema } from "./ascendingLevelSchema.js";
 export { ascendingSchema } from "./ascendingSchema.js";
@@ -57,11 +94,41 @@ export { generalEvaluationTypesSchema } from "./generalEvaluationTypesSchema.js"
 export { generalListItemSchema } from "./generalListItemSchema.js";
 export { generalListSchema } from "./generalListSchema.js";
 export { generalSchema } from "./generalSchema.js";
-export { generalsHtmlListPathParamsSchema, generalsHtmlList200Schema, generalsHtmlList204Schema, generalsHtmlList400Schema, generalsHtmlList500Schema, generalsHtmlListQueryResponseSchema } from "./generalsHtmlListSchema.js";
+export {
+  generalsHtmlListPathParamsSchema,
+  generalsHtmlList200Schema,
+  generalsHtmlList204Schema,
+  generalsHtmlList400Schema,
+  generalsHtmlList500Schema,
+  generalsHtmlListQueryResponseSchema,
+} from "./generalsHtmlListSchema.js";
 export { generalSummarySchema } from "./generalSummarySchema.js";
-export { getABookByUuidPathParamsSchema, getABookByUuid200Schema, getABookByUuid204Schema, getABookByUuid400Schema, getABookByUuid404Schema, getABookByUuid500Schema, getABookByUuidQueryResponseSchema } from "./getABookByUuidSchema.js";
-export { getAllBooksPathParamsSchema, getAllBooks200Schema, getAllBooks204Schema, getAllBooks400Schema, getAllBooks500Schema, getAllBooksQueryResponseSchema } from "./getAllBooksSchema.js";
-export { getGeneralByIdPathParamsSchema, getGeneralByIdQueryParamsSchema, getGeneralById200Schema, getGeneralById400Schema, getGeneralById404Schema, getGeneralById500Schema, getGeneralByIdQueryResponseSchema } from "./getGeneralByIdSchema.js";
+export {
+  getABookByUuidPathParamsSchema,
+  getABookByUuid200Schema,
+  getABookByUuid204Schema,
+  getABookByUuid400Schema,
+  getABookByUuid404Schema,
+  getABookByUuid500Schema,
+  getABookByUuidQueryResponseSchema,
+} from "./getABookByUuidSchema.js";
+export {
+  getAllBooksPathParamsSchema,
+  getAllBooks200Schema,
+  getAllBooks204Schema,
+  getAllBooks400Schema,
+  getAllBooks500Schema,
+  getAllBooksQueryResponseSchema,
+} from "./getAllBooksSchema.js";
+export {
+  getGeneralByIdPathParamsSchema,
+  getGeneralByIdQueryParamsSchema,
+  getGeneralById200Schema,
+  getGeneralById400Schema,
+  getGeneralById404Schema,
+  getGeneralById500Schema,
+  getGeneralByIdQueryResponseSchema,
+} from "./getGeneralByIdSchema.js";
 export { internalServerErrrorSchema } from "./internalServerErrrorSchema.js";
 export { noContentSchema } from "./noContentSchema.js";
 export { notFoundSchema } from "./notFoundSchema.js";
@@ -75,4 +142,11 @@ export { specialitySchema } from "./specialitySchema.js";
 export { standardBookListItemSchema } from "./standardBookListItemSchema.js";
 export { standardBookSchema } from "./standardBookSchema.js";
 export { targetedTypesSchema } from "./targetedTypesSchema.js";
-export { uuidForTypeAndNamePathParamsSchema, uuidForTypeAndName200Schema, uuidForTypeAndName204Schema, uuidForTypeAndName400Schema, uuidForTypeAndName500Schema, uuidForTypeAndNameQueryResponseSchema } from "./uuidForTypeAndNameSchema.js";
+export {
+  uuidForTypeAndNamePathParamsSchema,
+  uuidForTypeAndName200Schema,
+  uuidForTypeAndName204Schema,
+  uuidForTypeAndName400Schema,
+  uuidForTypeAndName500Schema,
+  uuidForTypeAndNameQueryResponseSchema,
+} from "./uuidForTypeAndNameSchema.js";

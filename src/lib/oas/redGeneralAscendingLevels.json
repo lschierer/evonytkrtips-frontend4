@@ -1,1 +1,6 @@
-{"enum":["1red","2red","3red","4red","5red"],"type":"string","description":"AscendingLevels for Red Generals","x-readme-ref-name":"RedGeneralAscendingLevels"}
+{
+  "enum": ["1red", "2red", "3red", "4red", "5red"],
+  "type": "string",
+  "description": "AscendingLevels for Red Generals",
+  "x-readme-ref-name": "RedGeneralAscendingLevels"
+}

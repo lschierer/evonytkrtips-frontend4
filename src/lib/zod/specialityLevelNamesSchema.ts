@@ -1,6 +1,10 @@
 import type { SpecialityLevelNames } from "../types/SpecialityLevelNames.js";
 import { z } from "zod";
 
- export const specialityLevelNamesSchema = z.enum(["None", "Green", "Blue", "Purple", "Orange", "Gold"]).default("None") as z.ZodType<SpecialityLevelNames>;
+export const specialityLevelNamesSchema = z
+  .enum(["None", "Green", "Blue", "Purple", "Orange", "Gold"])
+  .default("None") as z.ZodType<SpecialityLevelNames>;
 
- export type SpecialityLevelNamesSchema = z.infer<typeof specialityLevelNamesSchema>;
+export type SpecialityLevelNamesSchema = z.infer<
+  typeof specialityLevelNamesSchema
+>;

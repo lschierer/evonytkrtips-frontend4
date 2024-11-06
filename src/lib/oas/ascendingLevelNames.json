@@ -1,1 +1,20 @@
-{"oneOf":[{"type":"string","const":"none"},{"enum":["1red","2red","3red","4red","5red"],"type":"string","description":"AscendingLevels for Red Generals","x-readme-ref-name":"RedGeneralAscendingLevels"},{"enum":["1purple","2purple","3purple","4purple","5purple"],"type":"string","description":"Ascending Levels for Purple Generals","x-readme-ref-name":"PurpleGeneralAscendingLevels"}],"default":"none","description":"A general Ascends as either a Red or a Purple General but not both.\n","x-readme-ref-name":"AscendingLevelNames"}
+{
+  "oneOf": [
+    { "type": "string", "const": "none" },
+    {
+      "enum": ["1red", "2red", "3red", "4red", "5red"],
+      "type": "string",
+      "description": "AscendingLevels for Red Generals",
+      "x-readme-ref-name": "RedGeneralAscendingLevels"
+    },
+    {
+      "enum": ["1purple", "2purple", "3purple", "4purple", "5purple"],
+      "type": "string",
+      "description": "Ascending Levels for Purple Generals",
+      "x-readme-ref-name": "PurpleGeneralAscendingLevels"
+    }
+  ],
+  "default": "none",
+  "description": "A general Ascends as either a Red or a Purple General but not both.\n",
+  "x-readme-ref-name": "AscendingLevelNames"
+}

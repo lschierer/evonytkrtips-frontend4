@@ -1,1 +1,11 @@
-{"enum":["Ground Troops","Mounted Troops","Ranged Troops","Siege Machines","All Troops","Monsters"],"x-readme-ref-name":"TargetedTypes"}
+{
+  "enum": [
+    "Ground Troops",
+    "Mounted Troops",
+    "Ranged Troops",
+    "Siege Machines",
+    "All Troops",
+    "Monsters"
+  ],
+  "x-readme-ref-name": "TargetedTypes"
+}
