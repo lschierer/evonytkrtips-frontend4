@@ -1,14 +1,10 @@
 import { greenwoodPluginTypeScript } from "@greenwood/plugin-typescript";
 import { greenwoodPluginPostCss } from "@greenwood/plugin-postcss";
+import { greenwoodPluginRendererLit } from "@greenwood/plugin-renderer-lit";
 
 export default {
-  devServer: {
-    extensions: ["css", "ts", "js"],
-  },
-  optimization: "none",
-  isolation: true,
   activeContent: true,
-  prerender: true,
+  prerender: false,
   plugins: [
     greenwoodPluginTypeScript({
       extendConfig: true,
@@ -17,5 +13,6 @@ export default {
     greenwoodPluginPostCss({
       extendConfig: true,
     }),
+    greenwoodPluginRendererLit(),
   ],
 };

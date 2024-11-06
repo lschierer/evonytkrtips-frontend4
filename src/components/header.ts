@@ -1,15 +1,9 @@
-import {
-  html,
-  css,
-  LitElement,
-  unsafeCSS,
-  type CSSResultArray,
-} from "lit-element";
+import { html, css, LitElement, unsafeCSS, type CSSResultArray } from "lit";
 import { customElement } from "lit/decorators.js";
 
 import baseTheme from "../styles/theme.css" with { type: "css" };
 import SpectrumTokens from "../../node_modules/@spectrum-css/tokens/dist/index.css" with { type: "css" };
-import SpectrumTypography from "/node_modules/@spectrum-css/typography/dist/index.css" with { type: "css" };
+import SpectrumTypography from "../../node_modules/@spectrum-css/typography/dist/index.css" with { type: "css" };
 const DEBUG = 1;
 
 export const isolation = true;

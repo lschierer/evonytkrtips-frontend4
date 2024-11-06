@@ -1,19 +1,6 @@
-import {
-  LitElement,
-  /*css,
-  unsafeCSS,
-  type CSSResultArray,*/
-  type PropertyValues,
-  html,
-  nothing,
-} from "lit";
+import { LitElement, type PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 
-/*
-import baseTheme from "../styles/theme.css" with { type: "css" };
-import SpectrumTokens from "../../node_modules/@spectrum-css/tokens/dist/index.css" with { type: "css" };
-import SpectrumCard from "../../node_modules/@spectrum-css/card/dist/index.css" with { type: "css" };
-*/
 const DEBUG = 1;
 
 export const isolation = true;
@@ -70,63 +57,4 @@ export default class HorizontalCard extends LitElement {
       }
     }
   }
-
-  /*
-  public static override get styles(): CSSResultArray {
-    const baseThemeCss = unsafeCSS(baseTheme);
-    const SpectrumTokensCss = unsafeCSS(SpectrumTokens);
-    const SpectrumCardCss = unsafeCSS(SpectrumCard);
-    const localStyle = css``;
-    if (super.styles !== undefined && Array.isArray(super.styles)) {
-      return [
-        ...super.styles,
-        SpectrumTokensCss,
-        SpectrumCardCss,
-        baseThemeCss,
-        localStyle,
-      ];
-    } else {
-      return [SpectrumTokensCss, SpectrumCardCss, baseThemeCss, localStyle];
-    }
-  }
-  */
-  /*protected render() {
-    let iconHTML = html``;
-    if (this.iconName.length > 0) {
-      iconHTML = html`
-        <iconify-icon
-          icon="${this.iconName}"
-          width="${this.iconWidth || nothing}"
-          height="${this.iconHeight || nothing}"
-          aria-hidden="true"
-          focusable="false"
-          role="img"
-        ></iconify-icon>
-      `;
-    }
-    return html``;
-    /*html`
-      <div
-        class="spectrum-Card spectrum-Card--horizontal"
-        tabindex="0"
-        role="figure"
-      >
-        <div class="spectrum-Card-preview">${iconHTML}</div>
-        <div class="spectrum-Card-body">
-          <div class="spectrum-Card-header">
-            <div
-              class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS"
-            >
-              ${this.title}
-            </div>
-          </div>
-          <div class="spectrum-Card-content">
-            <a href="${this._targetUrl}">
-              <div class="spectrum-Card-description">${this.description}</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    `;*/
-  //}
 }
