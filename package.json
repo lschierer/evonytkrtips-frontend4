@@ -16,15 +16,12 @@
     "@greenwood/plugin-renderer-lit": "^0.30.0",
     "@greenwood/plugin-typescript": "^0.30.0",
     "@iconify/types": "^2.0.0",
-    "@parse5/tools": "^0.5.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/postcss-import": "^14.0.3",
     "@types/postcss-url": "^10.0.4",
     "@types/trusted-types": "^2.0.7",
     "autoprefixer": "^10.4.20",
-    "entities": "^5.0.0",
     "jiti": "^2.4.0",
-    "parse5": "^7.2.1",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
     "postcss-load-config": "^6.0.1",
@@ -35,7 +32,6 @@
     "typescript-plugin-css-modules": "^5.1.0"
   },
   "dependencies": {
-    "@lit-labs/ssr": "^3.2.2",
     "@lit-labs/ssr-client": "^1.1.7",
     "@lit-labs/ssr-dom-shim": "^1.2.1",
     "@lit/reactive-element": "^2.0.4",
