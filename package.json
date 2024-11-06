@@ -4,14 +4,15 @@
   "type": "module",
   "description": "Web Frontend for Evony TKR Tips",
   "scripts": {
-    "build": "greenwood build",
-    "start": "greenwood develop"
+    "develop": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js develop",
+    "build": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js build",
+    "serve": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js serve"
   },
   "author": "Luke Schierer",
   "license": "ISC",
   "devDependencies": {
     "@greenwood/cli": "^0.30.0",
-    "@greenwood/plugin-import-css": "^0.29.4",
+    "@greenwood/plugin-import-raw": "^0.30.0",
     "@greenwood/plugin-postcss": "^0.30.0",
     "@greenwood/plugin-renderer-lit": "^0.30.0",
     "@greenwood/plugin-typescript": "^0.30.0",
@@ -29,11 +30,14 @@
     "postcss-url": "^10.1.3",
     "ts-lit-plugin": "^2.0.2",
     "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
     "typescript-plugin-css-modules": "^5.1.0"
   },
   "dependencies": {
+    "@lit-labs/ssr-client": "^1.1.7",
     "@lit-labs/ssr-dom-shim": "^1.2.1",
     "@lit/reactive-element": "^2.0.4",
+    "@spectrum-css/card": "^9.2.0",
     "@spectrum-css/icon": "^7.1.4",
     "@spectrum-css/page": "^8.1.3",
     "@spectrum-css/tokens": "^14.6.0",
@@ -41,6 +45,7 @@
     "iconify-icon": "^2.1.0",
     "lit": "^3.2.1",
     "lit-element": "^4.1.1",
-    "lit-html": "^3.2.1"
+    "lit-html": "^3.2.1",
+    "zod": "^3.23.8"
   }
 }

@@ -1,0 +1,76 @@
+import {
+  type GeneralList,
+  type General,
+  type GeneralListItem,
+  generalSchema,
+} from "../lib/index";
+
+type PageData = {
+  title: string;
+  route: string;
+  id: string;
+  label: string;
+  body: string;
+};
+
+const fetchList = async () => {
+  const generalLists: GeneralList[] = await fetch(
+    "http://localhost:3000/generals.json",
+  ).then((resp) => resp.json());
+  const returnable: GeneralList[] = [];
+  generalLists.map((generalList) => {
+    if (generalList.type !== undefined && generalList.members !== undefined) {
+      returnable.push(generalList);
+    }
+  });
+  return returnable;
+};
+const sectionList = async (list: GeneralListItem[]) => {
+  const returnable: General[] = [];
+  await Promise.all(
+    list.map(async (item) => {
+      if (item.name !== undefined && item.id !== undefined) {
+        const generalDetails: General = await fetch(
+          `http://localhost:3000/generals/byId/${general.id}.json`,
+        ).then((resp) => resp.json());
+        const valid = generalSchema.safeParse(generalDetails);
+        if (valid.success) {
+          returnable.push(valid.data);
+        }
+      }
+    }),
+  );
+  return returnable;
+};
+const provider = async () => {
+  const lists = await fetchList();
+  return async function () {
+    return lists.map((list) => {
+      const members = list.members;
+      const returnable: PageData[] = [];
+      sectionList(members).then((generals) => {
+        generals.map((general) => {
+          const route = `/generals/details/${list.type}/general.name.toLowerCase().replace(/ /g, '-')}/`;
+          returnable.push({
+            title: general.name,
+            route: route,
+            id: general.id,
+            label: general.name,
+            body: `
+              <h1>${general.name}</h1>
+            `,
+          });
+        });
+      });
+      return returnable;
+    });
+  };
+};
+
+export const GeneralSourcePlugin = () => {
+  return {
+    type: "source",
+    name: "source-plugin-generalsapi",
+    provider,
+  };
+};

@@ -8,12 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@lit-labs/ssr-client':
+        specifier: ^1.1.7
+        version: 1.1.7
       '@lit-labs/ssr-dom-shim':
         specifier: ^1.2.1
         version: 1.2.1
       '@lit/reactive-element':
         specifier: ^2.0.4
         version: 2.0.4
+      '@spectrum-css/card':
+        specifier: ^9.2.0
+        version: 9.2.0(@spectrum-css/icon@7.1.4(@spectrum-css/tokens@14.6.0))(@spectrum-css/tokens@14.6.0)(@spectrum-css/typography@6.1.3(@spectrum-css/tokens@14.6.0))
       '@spectrum-css/icon':
         specifier: ^7.1.4
         version: 7.1.4(@spectrum-css/tokens@14.6.0)
@@ -38,13 +44,16 @@ importers:
       lit-html:
         specifier: ^3.2.1
         version: 3.2.1
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@greenwood/cli':
         specifier: ^0.30.0
         version: 0.30.0
-      '@greenwood/plugin-import-css':
-        specifier: ^0.29.4
-        version: 0.29.4(@greenwood/cli@0.30.0)
+      '@greenwood/plugin-import-raw':
+        specifier: ^0.30.0
+        version: 0.30.0(@greenwood/cli@0.30.0)
       '@greenwood/plugin-postcss':
         specifier: ^0.30.0
         version: 0.30.0(@greenwood/cli@0.30.0)
@@ -96,6 +105,9 @@ importers:
       tsx:
         specifier: ^4.19.2
         version: 4.19.2
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
       typescript-plugin-css-modules:
         specifier: ^5.1.0
         version: 5.1.0(typescript@5.6.3)
@@ -360,8 +372,8 @@ packages:
     engines: {node: '>=18.20.0'}
     hasBin: true
 
-  '@greenwood/plugin-import-css@0.29.4':
-    resolution: {integrity: sha512-94PHr3H2If1ZiVQsaCal2NkVU7B3wF1io3Ur0CD/WgsvmYah++cjJSdYCgKzyzkgRVMc4MJZAGB0wEkqM9QvLQ==}
+  '@greenwood/plugin-import-raw@0.30.0':
+    resolution: {integrity: sha512-cJUG3REDsoNyk9p49oEXYq/BblzyIp+7Kh2Dhdpd7PmIduoHqJ+m9jT3VIFp6SoryLAxbMqgzEGioZVIXyRs5A==}
     peerDependencies:
       '@greenwood/cli': ^0.4.0
 
@@ -578,6 +590,30 @@ packages:
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
+
+  '@spectrum-css/card@9.2.0':
+    resolution: {integrity: sha512-yOZTso7zENwMu2N9QSmUKmVWE153b9VNCILU1VwdkYJpiCl9zb7EJ0KPcUCbXZGG2Vl3Y/AE5pK6NDjos3yZKQ==}
+    peerDependencies:
+      '@spectrum-css/actionbutton': '>=6'
+      '@spectrum-css/asset': '>=5'
+      '@spectrum-css/checkbox': '>=9'
+      '@spectrum-css/icon': '>=7'
+      '@spectrum-css/quickaction': '>=3'
+      '@spectrum-css/tokens': '>=14.5.0'
+      '@spectrum-css/typography': '>=6'
+    peerDependenciesMeta:
+      '@spectrum-css/actionbutton':
+        optional: true
+      '@spectrum-css/asset':
+        optional: true
+      '@spectrum-css/checkbox':
+        optional: true
+      '@spectrum-css/icon':
+        optional: true
+      '@spectrum-css/quickaction':
+        optional: true
+      '@spectrum-css/typography':
+        optional: true
 
   '@spectrum-css/icon@7.1.4':
     resolution: {integrity: sha512-LawscsP5z7LJW2rK8mCBIqPhJeLoXZySAldcsII4HkvE0a8FUztzTyhwXs5jmNz+/1ldZrAWe36pxsHxm8YRlg==}
@@ -2768,7 +2804,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@greenwood/plugin-import-css@0.29.4(@greenwood/cli@0.30.0)':
+  '@greenwood/plugin-import-raw@0.30.0(@greenwood/cli@0.30.0)':
     dependencies:
       '@greenwood/cli': 0.30.0
 
@@ -2985,6 +3021,13 @@ snapshots:
       rollup: 3.29.5
 
   '@sindresorhus/merge-streams@2.3.0': {}
+
+  '@spectrum-css/card@9.2.0(@spectrum-css/icon@7.1.4(@spectrum-css/tokens@14.6.0))(@spectrum-css/tokens@14.6.0)(@spectrum-css/typography@6.1.3(@spectrum-css/tokens@14.6.0))':
+    dependencies:
+      '@spectrum-css/tokens': 14.6.0
+    optionalDependencies:
+      '@spectrum-css/icon': 7.1.4(@spectrum-css/tokens@14.6.0)
+      '@spectrum-css/typography': 6.1.3(@spectrum-css/tokens@14.6.0)
 
   '@spectrum-css/icon@7.1.4(@spectrum-css/tokens@14.6.0)':
     dependencies:

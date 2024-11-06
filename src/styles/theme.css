@@ -1,12 +1,21 @@
-@import "@spectrum-css/tokens/dist/index.css";
-@import "@spectrum-css/typography/dist/index.css";
-@import "@spectrum-css/page/dist/index.css";
-@import "@spectrum-css/icon/dist/index.css";
-
 body {
   margin: 0;
   padding: 0px;
 }
 main {
   margin-left: 8px;
+}
+
+div.cardGrid {
+  display: grid;
+  margin: 2px;
+  padding: 2px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: masonry;
+  column-gap: 2px;
+  row-gap: 2px;
+}
+
+horizontal-card {
+  grid-column-end: span 2;
 }
