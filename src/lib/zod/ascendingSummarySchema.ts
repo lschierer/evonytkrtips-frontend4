@@ -12,7 +12,7 @@ export const ascendingSummarySchema = z
     activeLevel: z.lazy(() => ascendingLevelNamesSchema),
   })
   .describe(
-    "The buffs provided foor a general ascended at a particualr number of stars.\n",
+    "The buffs provided foor a general ascended at a particualr number of stars.\n"
   ) as z.ZodType<AscendingSummary>;
 
 export type AscendingSummarySchema = z.infer<typeof ascendingSummarySchema>;

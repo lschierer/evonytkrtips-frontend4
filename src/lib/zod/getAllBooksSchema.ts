@@ -31,7 +31,7 @@ export const getAllBooks200Schema = z.object({
       z.union([
         z.lazy(() => builtinBookListObjectSchema),
         z.lazy(() => standardBookListItemSchema),
-      ]),
+      ])
     )
     .max(1000),
 }) as z.ZodType<GetAllBooks200>;

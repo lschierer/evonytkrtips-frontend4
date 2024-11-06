@@ -13,7 +13,7 @@ export const standardBookSchema = z
     level: z.number().int().min(1).max(4),
   })
   .describe(
-    "Standard Books that can be added to a General",
+    "Standard Books that can be added to a General"
   ) as z.ZodType<StandardBook>;
 
 export type StandardBookSchema = z.infer<typeof standardBookSchema>;

@@ -16,7 +16,7 @@ export const specialityEffectSchema = z
     activeLevel: z.lazy(() => specialityLevelNamesSchema),
   })
   .describe(
-    "The Effective Buff Provided by a Speciality at a particular level",
+    "The Effective Buff Provided by a Speciality at a particular level"
   ) as z.ZodType<SpecialityEffect>;
 
 export type SpecialityEffectSchema = z.infer<typeof specialityEffectSchema>;

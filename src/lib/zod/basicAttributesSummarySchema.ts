@@ -13,7 +13,7 @@ export const basicAttributesSummarySchema = z
     leadership: z.lazy(() => basicAttributesObjectSummarySchema),
   })
   .describe(
-    "A summary of the values that the basic attributes have at a particular level, after they have been computed for that level. ",
+    "A summary of the values that the basic attributes have at a particular level, after they have been computed for that level. "
   ) as z.ZodType<BasicAttributesSummary>;
 
 export type BasicAttributesSummarySchema = z.infer<

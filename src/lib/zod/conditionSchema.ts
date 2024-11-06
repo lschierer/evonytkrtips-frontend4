@@ -17,12 +17,12 @@ export const conditionSchema = z
         z.union([
           z.lazy(() => buffConditionSchema),
           z.lazy(() => debuffConditionsSchema),
-        ]),
+        ])
       )
       .max(10),
   ])
   .describe(
-    "A condition is essentially an adverb for a Buff object. ",
+    "A condition is essentially an adverb for a Buff object. "
   ) as z.ZodType<Condition>;
 
 export type ConditionSchema = z.infer<typeof conditionSchema>;

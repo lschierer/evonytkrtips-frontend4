@@ -12,7 +12,7 @@ export const ascendingSchema = z
     activeLevel: z.lazy(() => ascendingLevelNamesSchema).optional(),
   })
   .describe(
-    "The overall effeects of Ascending a General",
+    "The overall effeects of Ascending a General"
   ) as z.ZodType<Ascending>;
 
 export type AscendingSchema = z.infer<typeof ascendingSchema>;

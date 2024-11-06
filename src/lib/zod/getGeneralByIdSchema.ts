@@ -40,7 +40,7 @@ export const getGeneralByIdQueryParamsSchema = z
       .array(z.lazy(() => specialityLevelNamesSchema))
       .max(5)
       .describe(
-        "Generals have speciality levels, when you ask for one, you may want that general with specialities at specific levels.",
+        "Generals have speciality levels, when you ask for one, you may want that general with specialities at specific levels."
       )
       .optional(),
   })
@@ -54,7 +54,7 @@ export type GetGeneralByIdQueryParamsSchema = z.infer<
  * @description OK - Successful request with response body
  */
 export const getGeneralById200Schema = z.lazy(
-  () => generalSchema,
+  () => generalSchema
 ) as z.ZodType<GetGeneralById200>;
 
 export type GetGeneralById200Schema = z.infer<typeof getGeneralById200Schema>;
@@ -91,7 +91,7 @@ export const getGeneralById500Schema = z.object({
 export type GetGeneralById500Schema = z.infer<typeof getGeneralById500Schema>;
 
 export const getGeneralByIdQueryResponseSchema = z.lazy(
-  () => getGeneralById200Schema,
+  () => getGeneralById200Schema
 ) as z.ZodType<GetGeneralByIdQueryResponse>;
 
 export type GetGeneralByIdQueryResponseSchema = z.infer<

@@ -11,7 +11,7 @@ export const standardBookListItemSchema = z
     level: z.number().int().min(1).max(4),
   })
   .describe(
-    "list item version of the StandardBook",
+    "list item version of the StandardBook"
   ) as z.ZodType<StandardBookListItem>;
 
 export type StandardBookListItemSchema = z.infer<

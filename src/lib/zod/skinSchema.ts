@@ -18,7 +18,7 @@ export const skinSchema = z
       .optional(),
   })
   .describe(
-    "Some generals have Skins or alternate outfits that add buffs",
+    "Some generals have Skins or alternate outfits that add buffs"
   ) as z.ZodType<Skin>;
 
 export type SkinSchema = z.infer<typeof skinSchema>;

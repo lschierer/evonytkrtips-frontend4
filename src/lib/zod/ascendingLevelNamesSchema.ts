@@ -14,7 +14,7 @@ export const ascendingLevelNamesSchema = z
   ])
   .default("none")
   .describe(
-    "A general Ascends as either a Red or a Purple General but not both.\n",
+    "A general Ascends as either a Red or a Purple General but not both.\n"
   ) as z.ZodType<AscendingLevelNames>;
 
 export type AscendingLevelNamesSchema = z.infer<

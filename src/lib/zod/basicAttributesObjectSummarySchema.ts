@@ -11,7 +11,7 @@ export const basicAttributesObjectSummarySchema = z
     increment: z.number().optional(),
   })
   .describe(
-    "A simplified representation of a BasicAttributesObject, typically used in list views.",
+    "A simplified representation of a BasicAttributesObject, typically used in list views."
   ) as z.ZodType<BasicAttributesObjectSummary>;
 
 export type BasicAttributesObjectSummarySchema = z.infer<

@@ -16,7 +16,7 @@ export const generalSummarySchema = z
       .optional(),
   })
   .describe(
-    "The minimal information necessary to find a General",
+    "The minimal information necessary to find a General"
   ) as z.ZodType<GeneralSummary>;
 
 export type GeneralSummarySchema = z.infer<typeof generalSummarySchema>;

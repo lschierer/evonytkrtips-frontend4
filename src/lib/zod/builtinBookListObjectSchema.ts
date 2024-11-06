@@ -10,7 +10,7 @@ export const builtinBookListObjectSchema = z
     name: z.string().max(100),
   })
   .describe(
-    "List Item version of the BuiltInBook",
+    "List Item version of the BuiltInBook"
   ) as z.ZodType<BuiltinBookListObject>;
 
 export type BuiltinBookListObjectSchema = z.infer<
