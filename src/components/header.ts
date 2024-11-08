@@ -1,9 +1,10 @@
 import { html, css, LitElement, unsafeCSS, type CSSResultArray } from "lit";
 import { customElement } from "lit/decorators.js";
 
-import baseTheme from "../styles/theme.css" with { type: "css" };
-import SpectrumTokens from "../../node_modules/@spectrum-css/tokens/dist/index.css" with { type: "css" };
-import SpectrumTypography from "../../node_modules/@spectrum-css/typography/dist/index.css" with { type: "css" };
+import SpectrumElement from "./SpectrumElement.ts";
+
+import { TopLevelSections } from "../lib/topLevelSections.ts";
+
 const DEBUG = 1;
 
 export const isolation = true;
@@ -11,7 +12,7 @@ export const hydration = true;
 export const prerender = true;
 
 @customElement("app-header")
-export default class AppHeader extends LitElement {
+export default class AppHeader extends SpectrumElement {
   static localStyle = css`
     .header {
       background-color: var(--spectrum-cyan-800);
@@ -61,34 +62,16 @@ export default class AppHeader extends LitElement {
     }
   `;
 
-  public static override get styles(): CSSResultArray {
-    const baseThemeCss = unsafeCSS(baseTheme);
-    const SpectrumTokensCss = unsafeCSS(SpectrumTokens);
-    const SpectrumTypographyCss = unsafeCSS(SpectrumTypography);
-
-    if (super.styles !== undefined && Array.isArray(super.styles)) {
-      return [
-        ...super.styles,
-        SpectrumTokensCss,
-        SpectrumTypographyCss,
-        baseThemeCss,
-        AppHeader.localStyle,
-      ];
-    } else {
-      return [
-        SpectrumTokensCss,
-        SpectrumTypographyCss,
-        baseThemeCss,
-        AppHeader.localStyle,
-      ];
-    }
-  }
+  static styles =
+    super.styles !== undefined && Array.isArray(super.styles)
+      ? [...super.styles, AppHeader.localStyle]
+      : [AppHeader.localStyle];
 
   protected render() {
     if (DEBUG) {
       console.log(`AppHeader render start`);
     }
-    const sections = ["Generals", "Monsters", "SvS", "Reference"];
+    const sections = TopLevelSections.options;
 
     return html`
       <header class="header">
