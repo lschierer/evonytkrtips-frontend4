@@ -1,9 +1,9 @@
 import { html, css, LitElement, unsafeCSS, type CSSResultArray } from "lit";
 import { customElement } from "lit/decorators.js";
 
-import baseTheme from "../styles/theme.css" with { type: "css" };
-import SpectrumTokens from "../../node_modules/@spectrum-css/tokens/dist/index.css" with { type: "css" };
-import SpectrumCard from "../../node_modules/@spectrum-css/card/dist/index.css" with { type: "css" };
+import SpectrumCard from "/node_modules/@spectrum-css/card/dist/index.css" with { type: "css" };
+
+import SpectrumElement from "./SpectrumElement.ts";
 
 const DEBUG = 1;
 
@@ -12,7 +12,7 @@ export const hydration = true;
 export const prerender = true;
 
 @customElement("app-footer")
-export default class AppFooter extends LitElement {
+export default class AppFooter extends SpectrumElement {
   static localStyle = css`
     footer {
       background-color: var(--spectrum-cyan-800);
@@ -25,28 +25,11 @@ export default class AppFooter extends LitElement {
     }
   `;
 
-  public static override get styles(): CSSResultArray {
-    const baseThemeCss = unsafeCSS(baseTheme);
-    const SpectrumTokensCss = unsafeCSS(SpectrumTokens);
-    const SpectrumCardCss = unsafeCSS(SpectrumCard);
+  static styles =
+    super.styles !== undefined && Array.isArray(super.styles)
+      ? [...super.styles, SpectrumCard, AppFooter.localStyle]
+      : [SpectrumCard, AppFooter.localStyle];
 
-    if (super.styles !== undefined && Array.isArray(super.styles)) {
-      return [
-        ...super.styles,
-        SpectrumTokensCss,
-        SpectrumCardCss,
-        baseThemeCss,
-        AppFooter.localStyle,
-      ];
-    } else {
-      return [
-        SpectrumTokensCss,
-        SpectrumCardCss,
-        baseThemeCss,
-        AppFooter.localStyle,
-      ];
-    }
-  }
   protected render() {
     if (DEBUG) {
       console.log(`AppFooter render start`);
