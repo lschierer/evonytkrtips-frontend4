@@ -3,31 +3,26 @@
   "compilerOptions": {
     "strict": true,
     "composite": true,
-    "target": "es2023",
-    "module": "Preserve",
+    "target": "ES2023",
+    "module": "ESNext",
+    "lib": ["ES2023", "DOM"],
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
     "baseUrl": ".",
-    "rootDir": ".",
+    "declaration": true,
+    "declarationMap": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "allowArbitraryExtensions": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "declarationMap": true,
+    "moduleResolution": "Bundler",
     "sourceMap": true,
-    "declarationDir": "./types",
     "verbatimModuleSyntax": true,
     "plugins": [
-      { "name": "typescript-plugin-css-modules", "useConfig": true },
       {
         "name": "ts-lit-plugin",
         "strict": true
-      }
+      },
+      { "name": "typescript-plugin-css-modules" }
     ]
   },
-  "include": ["src/**/*.mts", "src/**/*.ts", "src/styles/*.css"]
+  "include": ["postcss.config.mts", "src/**/*.ts", "src/styles/*.css"]
 }

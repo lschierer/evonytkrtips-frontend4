@@ -9,21 +9,29 @@
     <meta property="og:site_name" content="Evony TKR Tips" />
     <link
       rel="stylesheet"
-      href="/node_modules/@spectrum-css/sidenav/dist/index.css"
+      href="/node_modules/@spectrum-css/splitview/dist/index.css"
     />
+    <script
+      type="module"
+      data-gwd-opt="default"
+      src="/components/split-view.ts"
+    ></script>
+    <script
+      type="module"
+      data-gwd-opt="default"
+      src="/components/generalsSectionElements/side-nav.ts"
+    ></script>
     <link rel="stylesheet" href="/styles/generals.css" />
   </head>
   <body>
-    <nav>
-      <script
-        type="module"
-        data-gwd-opt="default"
-        src="/components/generalsSectionElements/side-nav.ts"
-      ></script>
-      <side-nav route="${globalThis.page.route}"></side-nav>
-    </nav>
-    <main>
-      <content-outlet></content-outlet>
-    </main>
+    <div class="DEBUG">Generals Layout</div>
+    <split-view>
+      <div slot="left" class="nav">
+        <side-nav route="${globalThis.page.route}"></side-nav>
+      </div>
+      <main slot="right">
+        <content-outlet></content-outlet>
+      </main>
+    </split-view>
   </body>
 </html>

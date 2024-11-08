@@ -16,6 +16,9 @@ export default class AppFooter extends LitElement {
   static localStyle = css`
     footer {
       background-color: var(--spectrum-cyan-800);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
     h4 {
       margin-left: 8px;
