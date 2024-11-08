@@ -16,7 +16,9 @@ export default {
       extendConfig: true,
       servePage: "dynamic",
     }),
-
+    greenwoodPluginPostCss({
+      extendConfig: true,
+    }),
     greenwoodPluginRendererLit(),
   ],
 };
