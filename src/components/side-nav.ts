@@ -9,14 +9,13 @@ import {
 import { customElement, property } from "lit/decorators.js";
 import { until } from "lit/directives/until.js";
 
-//@ts-expect-error
 import { getContentByCollection } from "@greenwood/cli/src/data/client.js";
 
-import SpectrumElement from "../SpectrumElement.ts";
-import { TopLevelSections } from "../../lib/topLevelSections.ts";
+import SpectrumElement from "./SpectrumElement.ts";
+import { TopLevelSections } from "../lib/topLevelSections.ts";
 import SpectrumSideNav from "/node_modules/@spectrum-css/sidenav/dist/index.css" with { type: "css" };
 
-import GeneralsTheme from "../../styles/generals.css" with { type: "css" };
+import GeneralsTheme from "../styles/generals.css" with { type: "css" };
 
 export const isolation = true;
 export const prerender = false;
