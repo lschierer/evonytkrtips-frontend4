@@ -49,6 +49,13 @@ export default class TabulatorElement extends LitElement {
   @state()
   private table: Tabulator | null = null;
 
+  protected override updated(_changedProperties: PropertyValues): void {
+    super.updated(_changedProperties);
+    if (this.table == null) {
+      this.renderTable();
+    }
+  }
+
   private renderTable() {
     if (this.tableDivRef.value != undefined && this.tableDivRef.value != null) {
       const div = this.tableDivRef.value;
@@ -65,36 +72,34 @@ export default class TabulatorElement extends LitElement {
           },
           layout: "fitColumns",
           columns: [
+            { title: "Name", field: "name", width: 250 },
             {
-              title: "id",
-              field: "id",
+              title: "Age",
+              field: "age",
+              hozAlign: "left",
+              formatter: "progress",
             },
+            { title: "Favourite Color", field: "col" },
             {
-              title: "Name",
-              field: "name",
+              title: "Date Of Birth",
+              field: "dob",
+              sorter: "date",
+              hozAlign: "center",
             },
           ],
         });
       }
     }
   }
-  protected override updated(_changedProperties: PropertyValues): void {
-    super.updated(_changedProperties);
-    if (this.table == null) {
-      this.renderTable();
-    }
-  }
 
   static localSheet = css`
     :host {
       --headerMargin: 2;
-      width: 100%;
+      width: 90%;
       display: grid;
       grid-template-rows: auto 1fr;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       grid-auto-flow: row;
-      justify-items: stretch;
-      align-items: stretch;
       justify-content: start;
       align-content: start;
     }
@@ -102,7 +107,7 @@ export default class TabulatorElement extends LitElement {
       grid-row-start: 2;
       grid-column-start: 1;
       grid-column-end: span 5;
-      overflow-x: hidden;
+      overflow-x: scroll;
       border-bottom: var(--spectrum-border-width-100) solid
         var(--sl-color-gray-5);
       border-right: var(--spectrum-border-width-100) solid
@@ -113,7 +118,7 @@ export default class TabulatorElement extends LitElement {
     .tabulator {
       height: calc(var(--spectrum-component-height-500) * 5);
       font-size: var(--spectrum-global-dimension-font-size-25);
-      width: 100%;
+      width: 99%;
       .tabulator-header {
         .tabulator-header-contents {
           .tabulator-col,
@@ -136,6 +141,9 @@ export default class TabulatorElement extends LitElement {
             }
           }
         }
+      }
+      .tabulator-row {
+        display: flex;
       }
     }
 
