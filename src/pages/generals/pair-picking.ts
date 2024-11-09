@@ -1,5 +1,9 @@
 async function getBody() {
-  return ` <p>picking pairs</p> `;
+  return `
+    <script type="module" src="../../components/generalsSectionElements/tabulator-element.ts"></script>
+    <p>picking pairs</p>
+    <tabulator-element></tabulator-element>
+  `;
 }
 
 async function getFrontmatter() {
