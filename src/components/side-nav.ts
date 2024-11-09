@@ -1,24 +1,14 @@
-import {
-  LitElement,
-  html,
-  css,
-  nothing,
-  type CSSResultArray,
-  type TemplateResult,
-} from "lit";
+import { LitElement, html, css, nothing, type TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { until } from "lit/directives/until.js";
 
 import { getContentByCollection } from "@greenwood/cli/src/data/client.js";
 
-import SpectrumElement from "./SpectrumElement.ts";
 import { TopLevelSections } from "../lib/topLevelSections.ts";
 import SpectrumSideNav from "/node_modules/@spectrum-css/sidenav/dist/index.css" with { type: "css" };
 
 import GeneralsTheme from "../styles/generals.css" with { type: "css" };
 
-export const isolation = true;
-export const prerender = false;
 const DEBUG = 1;
 
 type Page = {
@@ -30,8 +20,8 @@ type Page = {
 };
 
 @customElement("side-nav")
-export default class SideNav extends SpectrumElement {
-  @property({ type: String, reflect: true })
+export default class SideNav extends LitElement {
+  @property({ reflect: true })
   public route: string = "";
 
   private async getSectionContents() {
@@ -78,12 +68,16 @@ export default class SideNav extends SpectrumElement {
     });
   }
 
-  static localStyle = css``;
+  static localStyle = css`
+    .spectrum-SideNav {
+      margin-left: -0.5rem;
+    }
+    .spectrum-SideNav-item {
+      margin-left: 1rem;
+    }
+  `;
 
-  static styles =
-    super.styles !== undefined && Array.isArray(super.styles)
-      ? [...super.styles, SpectrumSideNav, GeneralsTheme, SideNav.localStyle]
-      : [SpectrumSideNav, GeneralsTheme, SideNav.localStyle];
+  static styles = [SpectrumSideNav, SideNav.localStyle];
 
   private getTopLevels(): TemplateResult[] {
     const templates = new Array<TemplateResult>();

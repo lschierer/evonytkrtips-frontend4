@@ -1,18 +1,10 @@
 import { html, css, LitElement, unsafeCSS, type CSSResultArray } from "lit";
 import { customElement } from "lit/decorators.js";
 
-import SpectrumCard from "/node_modules/@spectrum-css/card/dist/index.css" with { type: "css" };
-
-import SpectrumElement from "./SpectrumElement.ts";
-
 const DEBUG = 1;
 
-export const isolation = true;
-export const hydration = true;
-export const prerender = true;
-
 @customElement("app-footer")
-export default class AppFooter extends SpectrumElement {
+export default class AppFooter extends LitElement {
   static localStyle = css`
     footer {
       background-color: var(--spectrum-cyan-800);
@@ -26,9 +18,9 @@ export default class AppFooter extends SpectrumElement {
   `;
 
   static styles =
-    super.styles !== undefined && Array.isArray(super.styles)
-      ? [...super.styles, SpectrumCard, AppFooter.localStyle]
-      : [SpectrumCard, AppFooter.localStyle];
+    super.styles != undefined && Array.isArray(super.styles)
+      ? [...super.styles, AppFooter.localStyle]
+      : [AppFooter.localStyle];
 
   protected render() {
     if (DEBUG) {

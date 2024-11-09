@@ -12,16 +12,12 @@ import { customElement, property, state } from "lit/decorators.js";
 import { ref } from "lit/directives/ref.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import SpectrumElement from "./SpectrumElement.ts";
-
 import SpectrumSplitView from "/node_modules/@spectrum-css/splitview/dist/index.css" with { type: "css" };
 
-export const isolation = true;
-export const prerender = false;
 const DEBUG = 1;
 
 @customElement("split-view")
-export default class SplitView extends SpectrumElement {
+export default class SplitView extends LitElement {
   @property({ type: String, reflect: true })
   public route: string = "";
 
@@ -90,10 +86,7 @@ export default class SplitView extends SpectrumElement {
     }
   `;
 
-  static styles =
-    super.styles !== undefined && Array.isArray(super.styles)
-      ? [...super.styles, SpectrumSplitView, SplitView.localStyle]
-      : [SpectrumSplitView, SplitView.localStyle];
+  static styles = [SpectrumSplitView, SplitView.localStyle];
 
   public render() {
     return html`

@@ -33,7 +33,7 @@ export default class CardGrid extends LitElement {
         this.sections.map((section) => {
           return html`
             <horizontal-card
-              title="${section.title}"
+              cardtitle="${section.title}"
               iconName="${section.name}"
               iconHeight="1.2rem"
               iconWidth="1.2rem"

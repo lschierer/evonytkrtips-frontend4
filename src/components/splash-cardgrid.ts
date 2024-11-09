@@ -1,29 +1,14 @@
-import { LitElement, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import CardGrid from "./card-grid.ts";
 
-const DEBUG = 1;
+const DEBUG = 0;
 
-type Section = {
-  title: string;
-  name: string;
-  description?: string;
-};
-
-export const isolation = true;
-export const hydration = true;
-export const prerender = false;
-
-@customElement("splash-cardgrid")
-export default class SplashCardGrid extends LitElement {
-  protected createRenderRoot() {
-    return this;
-  }
-
-  protected render() {
+export default class SplashCardGrid extends CardGrid {
+  constructor() {
+    super();
     if (DEBUG) {
-      console.log(`SplashCardGrid render start`);
+      console.log(`SplashCardGrid constructor`);
     }
-    const sections: Section[] = [
+    this.sections = [
       {
         title: "Generals",
         name: "healthicons:officer-outline",
@@ -35,27 +20,12 @@ export default class SplashCardGrid extends LitElement {
         description: "All about hunting monsters.",
       },
       {
-        title: "SvS",
+        title: "PvP",
         name: "mdi:sword-fight",
-        description: "All about participating in SvS.",
+        description: "All about participating in PvP.",
       },
       { title: "Reference", name: "ion:library-outline" },
     ];
-
-    return html`
-      <div class="cardGrid" role="grid">
-        ${sections.map((section) => {
-          return html`
-            <horizontal-card
-              title="${section.title}"
-              iconName="${section.name}"
-              iconHeight="1.2rem"
-              iconWidth="1.2rem"
-              description="${section.description ? section.description : ""} "
-            ></horizontal-card>
-          `;
-        })}
-      </div>
-    `;
   }
 }
+customElements.define("splash-cardgrid", SplashCardGrid);

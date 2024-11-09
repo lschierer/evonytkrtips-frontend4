@@ -1,10 +1,5 @@
-import { html } from "lit";
-
-export const isolation = true;
-export const prerender = true;
-
 async function getBody() {
-  return html`picking pairs`;
+  return ` <p>picking pairs</p> `;
 }
 
 async function getFrontmatter() {

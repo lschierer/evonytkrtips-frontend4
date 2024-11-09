@@ -4,6 +4,7 @@ import { greenwoodPluginRendererLit } from "@greenwood/plugin-renderer-lit";
 
 export default {
   activeContent: true,
+  isolation: true,
   prerender: true,
   markdown: {
     settings: {
@@ -19,6 +20,5 @@ export default {
     greenwoodPluginPostCss({
       extendConfig: true,
     }),
-    greenwoodPluginRendererLit(),
   ],
 };

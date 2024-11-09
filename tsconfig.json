@@ -2,12 +2,9 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "strict": true,
-    "composite": true,
     "target": "ES2023",
     "module": "ESNext",
     "lib": ["ES2023", "DOM"],
-    "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true,
     "baseUrl": ".",
     "declaration": true,
     "declarationMap": true,

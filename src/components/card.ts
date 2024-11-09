@@ -1,16 +1,25 @@
-import { LitElement, type PropertyValues, css, html, nothing } from "lit";
+import {
+  LitElement,
+  unsafeCSS,
+  type CSSResultArray,
+  type CSSResultOrNative,
+  type PropertyValues,
+  css,
+  html,
+  nothing,
+} from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 
-export const isolation = true;
-export const hydration = true;
-export const prerender = true;
+import SpectrumCard from "/node_modules/@spectrum-css/card/dist/index.css" with { type: "css" };
+
+import SpectrumElement from "./SpectrumElement.ts";
 
 const DEBUG = 1;
 
 @customElement("horizontal-card")
 class HorizontalCard extends LitElement {
   @property({ type: String })
-  public title: string = "";
+  public cardTitle: string = "";
 
   @property({ type: String })
   public description: string = "";
@@ -29,8 +38,8 @@ class HorizontalCard extends LitElement {
 
   constructor() {
     super();
-    if (this.title.length > 0) {
-      const target = this.title.toLowerCase().replaceAll(" ", "-");
+    if (this.cardTitle.length > 0) {
+      const target = this.cardTitle.toLowerCase().replaceAll(" ", "-");
       this._targetUrl = `/${target}/`;
     }
 
@@ -44,13 +53,13 @@ class HorizontalCard extends LitElement {
     if (DEBUG) {
       console.log(`willupdate start`);
       console.log(`_changedProperties has ${Object.keys(_changedProperties)}`);
-      console.log(`title is ${this.title}`);
+      console.log(`cardTitle is ${this.cardTitle}`);
     }
     if (
-      _changedProperties.has("title") ||
-      this.title.length > this._targetUrl.length
+      _changedProperties.has("cardTitle") ||
+      this.cardTitle.length > this._targetUrl.length
     ) {
-      const target = this.title.toLowerCase().replaceAll(" ", "-");
+      const target = this.cardTitle.toLowerCase().replaceAll(" ", "-");
       this._targetUrl = `/${target}/`;
       if (DEBUG) {
         console.log(`_targetUrl is ${this._targetUrl}`);
@@ -60,14 +69,19 @@ class HorizontalCard extends LitElement {
 
   static localStyle = css`
     :host {
-      background-color: var(--spectrum-green-500);
+      /*background-color: var(--spectrum-green-500);*/
     }
   `;
 
-  protected createRenderRoot() {
-    return this;
-  }
-  protected render() {
+  static override styles =
+    super.styles != undefined && Array.isArray(super.styles)
+      ? [...super.styles, SpectrumCard, HorizontalCard.localStyle]
+      : [SpectrumCard, HorizontalCard.localStyle];
+
+  protected override render() {
+    if (DEBUG) {
+      console.log(`HorizontalCard styles is ${HorizontalCard.styles}`);
+    }
     let iconHTML = html``;
     if (this.iconName.length > 0) {
       iconHTML = html`
@@ -92,9 +106,9 @@ class HorizontalCard extends LitElement {
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
               <div
-                class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS"
+                class="spectrum-Card-cardTitle spectrum-Heading spectrum-Heading--sizeXS"
               >
-                ${this.title}
+                ${this.cardTitle}
               </div>
             </div>
             <div class="spectrum-Card-content">
