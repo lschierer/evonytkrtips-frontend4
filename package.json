@@ -12,10 +12,10 @@
     "serve": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js serve"
   },
   "devDependencies": {
-    "@greenwood/cli": "~0.30.0",
-    "@greenwood/plugin-postcss": "^0.30.0",
-    "@greenwood/plugin-renderer-lit": "^0.30.0",
-    "@greenwood/plugin-typescript": "^0.30.0",
+    "@greenwood/cli": "~0.30.1",
+    "@greenwood/plugin-postcss": "^0.30.1",
+    "@greenwood/plugin-renderer-lit": "^0.30.1",
+    "@greenwood/plugin-typescript": "^0.30.1",
     "@iconify/types": "^2.0.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/postcss-import": "^14.0.3",
