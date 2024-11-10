@@ -6,9 +6,9 @@ import type {
   GetABookByUuid404,
   GetABookByUuid500,
   GetABookByUuidQueryResponse,
-} from "../types/GetABookByUuid.js";
-import { builtinBookSchema } from "./builtinBookSchema.js";
-import { standardBookSchema } from "./standardBookSchema.js";
+} from "../types/GetABookByUuid.ts";
+import { builtinBookSchema } from "./builtinBookSchema.ts";
+import { standardBookSchema } from "./standardBookSchema.ts";
 import { z } from "zod";
 
 export const getABookByUuidPathParamsSchema = z.object({

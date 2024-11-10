@@ -1,4 +1,4 @@
-import type { BasicAttributesObjectSummary } from "../types/BasicAttributesObjectSummary.js";
+import type { BasicAttributesObjectSummary } from "../types/BasicAttributesObjectSummary.ts";
 import { z } from "zod";
 
 /**

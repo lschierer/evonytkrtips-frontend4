@@ -1,5 +1,5 @@
-import type { AscendingLevel } from "./AscendingLevel.js";
-import type { AscendingLevelNames } from "./AscendingLevelNames.js";
+import type { AscendingLevel } from "./AscendingLevel.ts";
+import type { AscendingLevelNames } from "./AscendingLevelNames.ts";
 
 /**
  * @description The overall effeects of Ascending a General

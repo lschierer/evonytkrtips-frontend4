@@ -1,5 +1,5 @@
-import type { BuiltinBook } from "./BuiltinBook.js";
-import type { StandardBook } from "./StandardBook.js";
+import type { BuiltinBook } from "./BuiltinBook.ts";
+import type { StandardBook } from "./StandardBook.ts";
 
 export type GetABookByUuidPathParams = {
   /**

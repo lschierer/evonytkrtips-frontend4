@@ -1,4 +1,4 @@
-import type { TargetedTypes } from "../types/TargetedTypes.js";
+import type { TargetedTypes } from "../types/TargetedTypes.ts";
 import { z } from "zod";
 
 export const targetedTypesSchema = z.enum([

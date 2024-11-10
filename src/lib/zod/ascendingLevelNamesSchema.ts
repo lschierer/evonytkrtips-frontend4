@@ -1,6 +1,6 @@
-import type { AscendingLevelNames } from "../types/AscendingLevelNames.js";
-import { purpleGeneralAscendingLevelsSchema } from "./purpleGeneralAscendingLevelsSchema.js";
-import { redGeneralAscendingLevelsSchema } from "./redGeneralAscendingLevelsSchema.js";
+import type { AscendingLevelNames } from "../types/AscendingLevelNames.ts";
+import { purpleGeneralAscendingLevelsSchema } from "./purpleGeneralAscendingLevelsSchema.ts";
+import { redGeneralAscendingLevelsSchema } from "./redGeneralAscendingLevelsSchema.ts";
 import { z } from "zod";
 
 /**

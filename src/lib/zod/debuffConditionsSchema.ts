@@ -1,4 +1,4 @@
-import type { DebuffConditions } from "../types/DebuffConditions.js";
+import type { DebuffConditions } from "../types/DebuffConditions.ts";
 import { z } from "zod";
 
 /**

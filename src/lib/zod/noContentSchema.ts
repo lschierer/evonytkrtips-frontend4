@@ -1,4 +1,4 @@
-import type { NoContent } from "../types/NoContent.js";
+import type { NoContent } from "../types/NoContent.ts";
 import { z } from "zod";
 
 export const noContentSchema = z.null() as z.ZodType<NoContent>;

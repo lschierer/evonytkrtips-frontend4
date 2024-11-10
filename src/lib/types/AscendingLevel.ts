@@ -1,5 +1,5 @@
-import type { AscendingLevelNames } from "./AscendingLevelNames.js";
-import type { Buff } from "./Buff.js";
+import type { AscendingLevelNames } from "./AscendingLevelNames.ts";
+import type { Buff } from "./Buff.ts";
 
 /**
  * @description The effect of one star of ascending

@@ -1,5 +1,5 @@
-import type { BuiltinBookListObject } from "./BuiltinBookListObject.js";
-import type { StandardBookListItem } from "./StandardBookListItem.js";
+import type { BuiltinBookListObject } from "./BuiltinBookListObject.ts";
+import type { StandardBookListItem } from "./StandardBookListItem.ts";
 
 export type GetAllBooksPathParams = {
   /**

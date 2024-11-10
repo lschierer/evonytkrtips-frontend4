@@ -1,4 +1,4 @@
-import type { Buff } from "./Buff.js";
+import type { Buff } from "./Buff.ts";
 
 /**
  * @description A General\'s Builtin Book

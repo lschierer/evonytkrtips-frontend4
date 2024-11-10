@@ -1,4 +1,4 @@
-import type { Buff } from "./Buff.js";
+import type { Buff } from "./Buff.ts";
 
 /**
  * @description Some generals have Skins or alternate outfits that add buffs

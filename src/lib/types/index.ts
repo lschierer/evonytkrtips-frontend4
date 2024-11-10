@@ -1,29 +1,29 @@
-export type { Ascending } from "./Ascending.js";
-export type { AscendingLevel } from "./AscendingLevel.js";
-export type { AscendingLevelNames } from "./AscendingLevelNames.js";
-export type { AscendingSummary } from "./AscendingSummary.js";
-export type { BadRequest } from "./BadRequest.js";
-export type { BasicAttributes } from "./BasicAttributes.js";
-export type { BasicAttributesObject } from "./BasicAttributesObject.js";
-export type { BasicAttributesObjectSummary } from "./BasicAttributesObjectSummary.js";
-export type { BasicAttributesSummary } from "./BasicAttributesSummary.js";
-export type { ValueUnitEnum, Buff } from "./Buff.js";
-export type { BuffAttributesEnum, BuffAttributes } from "./BuffAttributes.js";
-export type { BuffConditionEnum, BuffCondition } from "./BuffCondition.js";
-export type { BuiltinBook } from "./BuiltinBook.js";
-export type { BuiltinBookListObject } from "./BuiltinBookListObject.js";
-export type { Condition } from "./Condition.js";
+export type { Ascending } from "./Ascending.ts";
+export type { AscendingLevel } from "./AscendingLevel.ts";
+export type { AscendingLevelNames } from "./AscendingLevelNames.ts";
+export type { AscendingSummary } from "./AscendingSummary.ts";
+export type { BadRequest } from "./BadRequest.ts";
+export type { BasicAttributes } from "./BasicAttributes.ts";
+export type { BasicAttributesObject } from "./BasicAttributesObject.ts";
+export type { BasicAttributesObjectSummary } from "./BasicAttributesObjectSummary.ts";
+export type { BasicAttributesSummary } from "./BasicAttributesSummary.ts";
+export type { ValueUnitEnum, Buff } from "./Buff.ts";
+export type { BuffAttributesEnum, BuffAttributes } from "./BuffAttributes.ts";
+export type { BuffConditionEnum, BuffCondition } from "./BuffCondition.ts";
+export type { BuiltinBook } from "./BuiltinBook.ts";
+export type { BuiltinBookListObject } from "./BuiltinBookListObject.ts";
+export type { Condition } from "./Condition.ts";
 export type {
   DebuffConditionsEnum,
   DebuffConditions,
-} from "./DebuffConditions.js";
-export type { General } from "./General.js";
+} from "./DebuffConditions.ts";
+export type { General } from "./General.ts";
 export type {
   GeneralEvaluationTypesEnum,
   GeneralEvaluationTypes,
-} from "./GeneralEvaluationTypes.js";
-export type { GeneralList } from "./GeneralList.js";
-export type { GeneralListItem } from "./GeneralListItem.js";
+} from "./GeneralEvaluationTypes.ts";
+export type { GeneralList } from "./GeneralList.ts";
+export type { GeneralListItem } from "./GeneralListItem.ts";
 export type {
   GeneralsHtmlListPathParams,
   GeneralsHtmlList200,
@@ -32,8 +32,8 @@ export type {
   GeneralsHtmlList500,
   GeneralsHtmlListQueryResponse,
   GeneralsHtmlListQuery,
-} from "./GeneralsHtmlList.js";
-export type { GeneralSummary } from "./GeneralSummary.js";
+} from "./GeneralsHtmlList.ts";
+export type { GeneralSummary } from "./GeneralSummary.ts";
 export type {
   GetABookByUuidPathParams,
   GetABookByUuid200,
@@ -43,7 +43,7 @@ export type {
   GetABookByUuid500,
   GetABookByUuidQueryResponse,
   GetABookByUuidQuery,
-} from "./GetABookByUuid.js";
+} from "./GetABookByUuid.ts";
 export type {
   GetAllBooksPathParams,
   GetAllBooks200,
@@ -52,7 +52,7 @@ export type {
   GetAllBooks500,
   GetAllBooksQueryResponse,
   GetAllBooksQuery,
-} from "./GetAllBooks.js";
+} from "./GetAllBooks.ts";
 export type {
   GetGeneralByIdPathParams,
   GetGeneralByIdQueryParams,
@@ -62,29 +62,29 @@ export type {
   GetGeneralById500,
   GetGeneralByIdQueryResponse,
   GetGeneralByIdQuery,
-} from "./GetGeneralById.js";
-export type { InternalServerErrror } from "./InternalServerErrror.js";
-export type { NoContent } from "./NoContent.js";
-export type { NotFound } from "./NotFound.js";
+} from "./GetGeneralById.ts";
+export type { InternalServerErrror } from "./InternalServerErrror.ts";
+export type { NoContent } from "./NoContent.ts";
+export type { NotFound } from "./NotFound.ts";
 export type {
   PurpleGeneralAscendingLevelsEnum,
   PurpleGeneralAscendingLevels,
-} from "./PurpleGeneralAscendingLevels.js";
+} from "./PurpleGeneralAscendingLevels.ts";
 export type {
   RedGeneralAscendingLevelsEnum,
   RedGeneralAscendingLevels,
-} from "./RedGeneralAscendingLevels.js";
-export type { Skin } from "./Skin.js";
-export type { Speciality } from "./Speciality.js";
-export type { SpecialityEffect } from "./SpecialityEffect.js";
-export type { SpecialityLevel } from "./SpecialityLevel.js";
+} from "./RedGeneralAscendingLevels.ts";
+export type { Skin } from "./Skin.ts";
+export type { Speciality } from "./Speciality.ts";
+export type { SpecialityEffect } from "./SpecialityEffect.ts";
+export type { SpecialityLevel } from "./SpecialityLevel.ts";
 export type {
   SpecialityLevelNamesEnum,
   SpecialityLevelNames,
-} from "./SpecialityLevelNames.js";
-export type { StandardBook } from "./StandardBook.js";
-export type { StandardBookListItem } from "./StandardBookListItem.js";
-export type { TargetedTypesEnum, TargetedTypes } from "./TargetedTypes.js";
+} from "./SpecialityLevelNames.ts";
+export type { StandardBook } from "./StandardBook.ts";
+export type { StandardBookListItem } from "./StandardBookListItem.ts";
+export type { TargetedTypesEnum, TargetedTypes } from "./TargetedTypes.ts";
 export type {
   UuidForTypeAndNamePathParams,
   UuidForTypeAndName200,
@@ -93,13 +93,13 @@ export type {
   UuidForTypeAndName500,
   UuidForTypeAndNameQueryResponse,
   UuidForTypeAndNameQuery,
-} from "./UuidForTypeAndName.js";
-export { valueUnitEnum } from "./Buff.js";
-export { buffAttributesEnum } from "./BuffAttributes.js";
-export { buffConditionEnum } from "./BuffCondition.js";
-export { debuffConditionsEnum } from "./DebuffConditions.js";
-export { generalEvaluationTypesEnum } from "./GeneralEvaluationTypes.js";
-export { purpleGeneralAscendingLevelsEnum } from "./PurpleGeneralAscendingLevels.js";
-export { redGeneralAscendingLevelsEnum } from "./RedGeneralAscendingLevels.js";
-export { specialityLevelNamesEnum } from "./SpecialityLevelNames.js";
-export { targetedTypesEnum } from "./TargetedTypes.js";
+} from "./UuidForTypeAndName.ts";
+export { valueUnitEnum } from "./Buff.ts";
+export { buffAttributesEnum } from "./BuffAttributes.ts";
+export { buffConditionEnum } from "./BuffCondition.ts";
+export { debuffConditionsEnum } from "./DebuffConditions.ts";
+export { generalEvaluationTypesEnum } from "./GeneralEvaluationTypes.ts";
+export { purpleGeneralAscendingLevelsEnum } from "./PurpleGeneralAscendingLevels.ts";
+export { redGeneralAscendingLevelsEnum } from "./RedGeneralAscendingLevels.ts";
+export { specialityLevelNamesEnum } from "./SpecialityLevelNames.ts";
+export { targetedTypesEnum } from "./TargetedTypes.ts";

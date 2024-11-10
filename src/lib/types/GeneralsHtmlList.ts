@@ -1,4 +1,4 @@
-import type { GeneralList } from "./GeneralList.js";
+import type { GeneralList } from "./GeneralList.ts";
 
 export type GeneralsHtmlListPathParams = {
   /**

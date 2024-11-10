@@ -1,4 +1,4 @@
-import type { BasicAttributesObject } from "./BasicAttributesObject.js";
+import type { BasicAttributesObject } from "./BasicAttributesObject.ts";
 
 export type BasicAttributes = {
   /**

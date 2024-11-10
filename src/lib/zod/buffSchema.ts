@@ -1,7 +1,7 @@
-import type { Buff } from "../types/Buff.js";
-import { buffAttributesSchema } from "./buffAttributesSchema.js";
-import { conditionSchema } from "./conditionSchema.js";
-import { targetedTypesSchema } from "./targetedTypesSchema.js";
+import type { Buff } from "../types/Buff.ts";
+import { buffAttributesSchema } from "./buffAttributesSchema.ts";
+import { conditionSchema } from "./conditionSchema.ts";
+import { targetedTypesSchema } from "./targetedTypesSchema.ts";
 import { z } from "zod";
 
 export const buffSchema = z.object({

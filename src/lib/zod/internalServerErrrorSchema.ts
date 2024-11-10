@@ -1,4 +1,4 @@
-import type { InternalServerErrror } from "../types/InternalServerErrror.js";
+import type { InternalServerErrror } from "../types/InternalServerErrror.ts";
 import { z } from "zod";
 
 export const internalServerErrrorSchema = z.object({

@@ -1,5 +1,5 @@
-import type { BasicAttributesSummary } from "../types/BasicAttributesSummary.js";
-import { basicAttributesObjectSummarySchema } from "./basicAttributesObjectSummarySchema.js";
+import type { BasicAttributesSummary } from "../types/BasicAttributesSummary.ts";
+import { basicAttributesObjectSummarySchema } from "./basicAttributesObjectSummarySchema.ts";
 import { z } from "zod";
 
 /**
@@ -7,10 +7,10 @@ import { z } from "zod";
  */
 export const basicAttributesSummarySchema = z
   .object({
-    attack: z.lazy(() => basicAttributesObjectSummarySchema),
-    defense: z.lazy(() => basicAttributesObjectSummarySchema),
-    politics: z.lazy(() => basicAttributesObjectSummarySchema),
-    leadership: z.lazy(() => basicAttributesObjectSummarySchema),
+    attack: basicAttributesObjectSummarySchema,
+    defense: basicAttributesObjectSummarySchema,
+    politics: basicAttributesObjectSummarySchema,
+    leadership: basicAttributesObjectSummarySchema,
   })
   .describe(
     "A summary of the values that the basic attributes have at a particular level, after they have been computed for that level. "

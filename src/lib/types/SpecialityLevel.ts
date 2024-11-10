@@ -1,5 +1,5 @@
-import type { Buff } from "./Buff.js";
-import type { SpecialityLevelNames } from "./SpecialityLevelNames.js";
+import type { Buff } from "./Buff.ts";
+import type { SpecialityLevelNames } from "./SpecialityLevelNames.ts";
 
 export type SpecialityLevel = {
   /**

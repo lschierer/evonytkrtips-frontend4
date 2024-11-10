@@ -1,4 +1,4 @@
-import type { Buff } from "./Buff.js";
+import type { Buff } from "./Buff.ts";
 
 /**
  * @description Standard Books that can be added to a General

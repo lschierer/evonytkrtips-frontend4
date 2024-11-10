@@ -1,6 +1,6 @@
-import type { AscendingLevelNames } from "./AscendingLevelNames.js";
-import type { General } from "./General.js";
-import type { SpecialityLevelNames } from "./SpecialityLevelNames.js";
+import type { AscendingLevelNames } from "./AscendingLevelNames.ts";
+import type { General } from "./General.ts";
+import type { SpecialityLevelNames } from "./SpecialityLevelNames.ts";
 
 export type GetGeneralByIdPathParams = {
   /**

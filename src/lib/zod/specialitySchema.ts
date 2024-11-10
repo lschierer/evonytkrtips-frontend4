@@ -1,6 +1,6 @@
-import type { Speciality } from "../types/Speciality.js";
-import { specialityLevelNamesSchema } from "./specialityLevelNamesSchema.js";
-import { specialityLevelSchema } from "./specialityLevelSchema.js";
+import type { Speciality } from "../types/Speciality.ts";
+import { specialityLevelNamesSchema } from "./specialityLevelNamesSchema.ts";
+import { specialityLevelSchema } from "./specialityLevelSchema.ts";
 import { z } from "zod";
 
 export const specialitySchema = z.object({

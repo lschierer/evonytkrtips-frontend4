@@ -1,4 +1,4 @@
-import type { GeneralEvaluationTypes } from "../types/GeneralEvaluationTypes.js";
+import type { GeneralEvaluationTypes } from "../types/GeneralEvaluationTypes.ts";
 import { z } from "zod";
 
 export const generalEvaluationTypesSchema = z.enum([

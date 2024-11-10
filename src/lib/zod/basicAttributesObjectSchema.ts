@@ -1,4 +1,4 @@
-import type { BasicAttributesObject } from "../types/BasicAttributesObject.js";
+import type { BasicAttributesObject } from "../types/BasicAttributesObject.ts";
 import { z } from "zod";
 
 export const basicAttributesObjectSchema = z.object({

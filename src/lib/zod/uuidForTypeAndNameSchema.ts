@@ -5,8 +5,8 @@ import type {
   UuidForTypeAndName400,
   UuidForTypeAndName500,
   UuidForTypeAndNameQueryResponse,
-} from "../types/UuidForTypeAndName.js";
-import { generalEvaluationTypesSchema } from "./generalEvaluationTypesSchema.js";
+} from "../types/UuidForTypeAndName.ts";
+import { generalEvaluationTypesSchema } from "./generalEvaluationTypesSchema.ts";
 import { z } from "zod";
 
 export const uuidForTypeAndNamePathParamsSchema = z.object({

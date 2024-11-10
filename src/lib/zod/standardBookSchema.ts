@@ -1,5 +1,5 @@
-import type { StandardBook } from "../types/StandardBook.js";
-import { buffSchema } from "./buffSchema.js";
+import type { StandardBook } from "../types/StandardBook.ts";
+import { buffSchema } from "./buffSchema.ts";
 import { z } from "zod";
 
 /**

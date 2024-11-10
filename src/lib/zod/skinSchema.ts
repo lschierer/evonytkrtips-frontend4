@@ -1,5 +1,5 @@
-import type { Skin } from "../types/Skin.js";
-import { buffSchema } from "./buffSchema.js";
+import type { Skin } from "../types/Skin.ts";
+import { buffSchema } from "./buffSchema.ts";
 import { z } from "zod";
 
 /**

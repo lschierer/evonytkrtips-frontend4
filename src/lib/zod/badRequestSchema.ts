@@ -1,4 +1,4 @@
-import type { BadRequest } from "../types/BadRequest.js";
+import type { BadRequest } from "../types/BadRequest.ts";
 import { z } from "zod";
 
 export const badRequestSchema = z.object({

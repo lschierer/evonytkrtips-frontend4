@@ -1,35 +1,35 @@
-export type { Ascending } from "./types/Ascending.js";
-export type { AscendingLevel } from "./types/AscendingLevel.js";
-export type { AscendingLevelNames } from "./types/AscendingLevelNames.js";
-export type { AscendingSummary } from "./types/AscendingSummary.js";
-export type { BadRequest } from "./types/BadRequest.js";
-export type { BasicAttributes } from "./types/BasicAttributes.js";
-export type { BasicAttributesObject } from "./types/BasicAttributesObject.js";
-export type { BasicAttributesObjectSummary } from "./types/BasicAttributesObjectSummary.js";
-export type { BasicAttributesSummary } from "./types/BasicAttributesSummary.js";
-export type { ValueUnitEnum, Buff } from "./types/Buff.js";
+export type { Ascending } from "./types/Ascending.ts";
+export type { AscendingLevel } from "./types/AscendingLevel.ts";
+export type { AscendingLevelNames } from "./types/AscendingLevelNames.ts";
+export type { AscendingSummary } from "./types/AscendingSummary.ts";
+export type { BadRequest } from "./types/BadRequest.ts";
+export type { BasicAttributes } from "./types/BasicAttributes.ts";
+export type { BasicAttributesObject } from "./types/BasicAttributesObject.ts";
+export type { BasicAttributesObjectSummary } from "./types/BasicAttributesObjectSummary.ts";
+export type { BasicAttributesSummary } from "./types/BasicAttributesSummary.ts";
+export type { ValueUnitEnum, Buff } from "./types/Buff.ts";
 export type {
   BuffAttributesEnum,
   BuffAttributes,
-} from "./types/BuffAttributes.js";
+} from "./types/BuffAttributes.ts";
 export type {
   BuffConditionEnum,
   BuffCondition,
-} from "./types/BuffCondition.js";
-export type { BuiltinBook } from "./types/BuiltinBook.js";
-export type { BuiltinBookListObject } from "./types/BuiltinBookListObject.js";
-export type { Condition } from "./types/Condition.js";
+} from "./types/BuffCondition.ts";
+export type { BuiltinBook } from "./types/BuiltinBook.ts";
+export type { BuiltinBookListObject } from "./types/BuiltinBookListObject.ts";
+export type { Condition } from "./types/Condition.ts";
 export type {
   DebuffConditionsEnum,
   DebuffConditions,
-} from "./types/DebuffConditions.js";
-export type { General } from "./types/General.js";
+} from "./types/DebuffConditions.ts";
+export type { General } from "./types/General.ts";
 export type {
   GeneralEvaluationTypesEnum,
   GeneralEvaluationTypes,
-} from "./types/GeneralEvaluationTypes.js";
-export type { GeneralList } from "./types/GeneralList.js";
-export type { GeneralListItem } from "./types/GeneralListItem.js";
+} from "./types/GeneralEvaluationTypes.ts";
+export type { GeneralList } from "./types/GeneralList.ts";
+export type { GeneralListItem } from "./types/GeneralListItem.ts";
 export type {
   GeneralsHtmlListPathParams,
   GeneralsHtmlList200,
@@ -38,8 +38,8 @@ export type {
   GeneralsHtmlList500,
   GeneralsHtmlListQueryResponse,
   GeneralsHtmlListQuery,
-} from "./types/GeneralsHtmlList.js";
-export type { GeneralSummary } from "./types/GeneralSummary.js";
+} from "./types/GeneralsHtmlList.ts";
+export type { GeneralSummary } from "./types/GeneralSummary.ts";
 export type {
   GetABookByUuidPathParams,
   GetABookByUuid200,
@@ -49,7 +49,7 @@ export type {
   GetABookByUuid500,
   GetABookByUuidQueryResponse,
   GetABookByUuidQuery,
-} from "./types/GetABookByUuid.js";
+} from "./types/GetABookByUuid.ts";
 export type {
   GetAllBooksPathParams,
   GetAllBooks200,
@@ -58,7 +58,7 @@ export type {
   GetAllBooks500,
   GetAllBooksQueryResponse,
   GetAllBooksQuery,
-} from "./types/GetAllBooks.js";
+} from "./types/GetAllBooks.ts";
 export type {
   GetGeneralByIdPathParams,
   GetGeneralByIdQueryParams,
@@ -68,32 +68,32 @@ export type {
   GetGeneralById500,
   GetGeneralByIdQueryResponse,
   GetGeneralByIdQuery,
-} from "./types/GetGeneralById.js";
-export type { InternalServerErrror } from "./types/InternalServerErrror.js";
-export type { NoContent } from "./types/NoContent.js";
-export type { NotFound } from "./types/NotFound.js";
+} from "./types/GetGeneralById.ts";
+export type { InternalServerErrror } from "./types/InternalServerErrror.ts";
+export type { NoContent } from "./types/NoContent.ts";
+export type { NotFound } from "./types/NotFound.ts";
 export type {
   PurpleGeneralAscendingLevelsEnum,
   PurpleGeneralAscendingLevels,
-} from "./types/PurpleGeneralAscendingLevels.js";
+} from "./types/PurpleGeneralAscendingLevels.ts";
 export type {
   RedGeneralAscendingLevelsEnum,
   RedGeneralAscendingLevels,
-} from "./types/RedGeneralAscendingLevels.js";
-export type { Skin } from "./types/Skin.js";
-export type { Speciality } from "./types/Speciality.js";
-export type { SpecialityEffect } from "./types/SpecialityEffect.js";
-export type { SpecialityLevel } from "./types/SpecialityLevel.js";
+} from "./types/RedGeneralAscendingLevels.ts";
+export type { Skin } from "./types/Skin.ts";
+export type { Speciality } from "./types/Speciality.ts";
+export type { SpecialityEffect } from "./types/SpecialityEffect.ts";
+export type { SpecialityLevel } from "./types/SpecialityLevel.ts";
 export type {
   SpecialityLevelNamesEnum,
   SpecialityLevelNames,
-} from "./types/SpecialityLevelNames.js";
-export type { StandardBook } from "./types/StandardBook.js";
-export type { StandardBookListItem } from "./types/StandardBookListItem.js";
+} from "./types/SpecialityLevelNames.ts";
+export type { StandardBook } from "./types/StandardBook.ts";
+export type { StandardBookListItem } from "./types/StandardBookListItem.ts";
 export type {
   TargetedTypesEnum,
   TargetedTypes,
-} from "./types/TargetedTypes.js";
+} from "./types/TargetedTypes.ts";
 export type {
   UuidForTypeAndNamePathParams,
   UuidForTypeAndName200,
@@ -102,27 +102,27 @@ export type {
   UuidForTypeAndName500,
   UuidForTypeAndNameQueryResponse,
   UuidForTypeAndNameQuery,
-} from "./types/UuidForTypeAndName.js";
-export type { AscendingLevelNamesSchema } from "./zod/ascendingLevelNamesSchema.js";
-export type { AscendingLevelSchema } from "./zod/ascendingLevelSchema.js";
-export type { AscendingSchema } from "./zod/ascendingSchema.js";
-export type { AscendingSummarySchema } from "./zod/ascendingSummarySchema.js";
-export type { BadRequestSchema } from "./zod/badRequestSchema.js";
-export type { BasicAttributesObjectSchema } from "./zod/basicAttributesObjectSchema.js";
-export type { BasicAttributesObjectSummarySchema } from "./zod/basicAttributesObjectSummarySchema.js";
-export type { BasicAttributesSchema } from "./zod/basicAttributesSchema.js";
-export type { BasicAttributesSummarySchema } from "./zod/basicAttributesSummarySchema.js";
-export type { BuffAttributesSchema } from "./zod/buffAttributesSchema.js";
-export type { BuffConditionSchema } from "./zod/buffConditionSchema.js";
-export type { BuffSchema } from "./zod/buffSchema.js";
-export type { BuiltinBookListObjectSchema } from "./zod/builtinBookListObjectSchema.js";
-export type { BuiltinBookSchema } from "./zod/builtinBookSchema.js";
-export type { ConditionSchema } from "./zod/conditionSchema.js";
-export type { DebuffConditionsSchema } from "./zod/debuffConditionsSchema.js";
-export type { GeneralEvaluationTypesSchema } from "./zod/generalEvaluationTypesSchema.js";
-export type { GeneralListItemSchema } from "./zod/generalListItemSchema.js";
-export type { GeneralListSchema } from "./zod/generalListSchema.js";
-export type { GeneralSchema } from "./zod/generalSchema.js";
+} from "./types/UuidForTypeAndName.ts";
+export type { AscendingLevelNamesSchema } from "./zod/ascendingLevelNamesSchema.ts";
+export type { AscendingLevelSchema } from "./zod/ascendingLevelSchema.ts";
+export type { AscendingSchema } from "./zod/ascendingSchema.ts";
+export type { AscendingSummarySchema } from "./zod/ascendingSummarySchema.ts";
+export type { BadRequestSchema } from "./zod/badRequestSchema.ts";
+export type { BasicAttributesObjectSchema } from "./zod/basicAttributesObjectSchema.ts";
+export type { BasicAttributesObjectSummarySchema } from "./zod/basicAttributesObjectSummarySchema.ts";
+export type { BasicAttributesSchema } from "./zod/basicAttributesSchema.ts";
+export type { BasicAttributesSummarySchema } from "./zod/basicAttributesSummarySchema.ts";
+export type { BuffAttributesSchema } from "./zod/buffAttributesSchema.ts";
+export type { BuffConditionSchema } from "./zod/buffConditionSchema.ts";
+export type { BuffSchema } from "./zod/buffSchema.ts";
+export type { BuiltinBookListObjectSchema } from "./zod/builtinBookListObjectSchema.ts";
+export type { BuiltinBookSchema } from "./zod/builtinBookSchema.ts";
+export type { ConditionSchema } from "./zod/conditionSchema.ts";
+export type { DebuffConditionsSchema } from "./zod/debuffConditionsSchema.ts";
+export type { GeneralEvaluationTypesSchema } from "./zod/generalEvaluationTypesSchema.ts";
+export type { GeneralListItemSchema } from "./zod/generalListItemSchema.ts";
+export type { GeneralListSchema } from "./zod/generalListSchema.ts";
+export type { GeneralSchema } from "./zod/generalSchema.ts";
 export type {
   GeneralsHtmlListPathParamsSchema,
   GeneralsHtmlList200Schema,
@@ -130,8 +130,8 @@ export type {
   GeneralsHtmlList400Schema,
   GeneralsHtmlList500Schema,
   GeneralsHtmlListQueryResponseSchema,
-} from "./zod/generalsHtmlListSchema.js";
-export type { GeneralSummarySchema } from "./zod/generalSummarySchema.js";
+} from "./zod/generalsHtmlListSchema.ts";
+export type { GeneralSummarySchema } from "./zod/generalSummarySchema.ts";
 export type {
   GetABookByUuidPathParamsSchema,
   GetABookByUuid200Schema,
@@ -140,7 +140,7 @@ export type {
   GetABookByUuid404Schema,
   GetABookByUuid500Schema,
   GetABookByUuidQueryResponseSchema,
-} from "./zod/getABookByUuidSchema.js";
+} from "./zod/getABookByUuidSchema.ts";
 export type {
   GetAllBooksPathParamsSchema,
   GetAllBooks200Schema,
@@ -148,7 +148,7 @@ export type {
   GetAllBooks400Schema,
   GetAllBooks500Schema,
   GetAllBooksQueryResponseSchema,
-} from "./zod/getAllBooksSchema.js";
+} from "./zod/getAllBooksSchema.ts";
 export type {
   GetGeneralByIdPathParamsSchema,
   GetGeneralByIdQueryParamsSchema,
@@ -157,20 +157,20 @@ export type {
   GetGeneralById404Schema,
   GetGeneralById500Schema,
   GetGeneralByIdQueryResponseSchema,
-} from "./zod/getGeneralByIdSchema.js";
-export type { InternalServerErrrorSchema } from "./zod/internalServerErrrorSchema.js";
-export type { NoContentSchema } from "./zod/noContentSchema.js";
-export type { NotFoundSchema } from "./zod/notFoundSchema.js";
-export type { PurpleGeneralAscendingLevelsSchema } from "./zod/purpleGeneralAscendingLevelsSchema.js";
-export type { RedGeneralAscendingLevelsSchema } from "./zod/redGeneralAscendingLevelsSchema.js";
-export type { SkinSchema } from "./zod/skinSchema.js";
-export type { SpecialityEffectSchema } from "./zod/specialityEffectSchema.js";
-export type { SpecialityLevelNamesSchema } from "./zod/specialityLevelNamesSchema.js";
-export type { SpecialityLevelSchema } from "./zod/specialityLevelSchema.js";
-export type { SpecialitySchema } from "./zod/specialitySchema.js";
-export type { StandardBookListItemSchema } from "./zod/standardBookListItemSchema.js";
-export type { StandardBookSchema } from "./zod/standardBookSchema.js";
-export type { TargetedTypesSchema } from "./zod/targetedTypesSchema.js";
+} from "./zod/getGeneralByIdSchema.ts";
+export type { InternalServerErrrorSchema } from "./zod/internalServerErrrorSchema.ts";
+export type { NoContentSchema } from "./zod/noContentSchema.ts";
+export type { NotFoundSchema } from "./zod/notFoundSchema.ts";
+export type { PurpleGeneralAscendingLevelsSchema } from "./zod/purpleGeneralAscendingLevelsSchema.ts";
+export type { RedGeneralAscendingLevelsSchema } from "./zod/redGeneralAscendingLevelsSchema.ts";
+export type { SkinSchema } from "./zod/skinSchema.ts";
+export type { SpecialityEffectSchema } from "./zod/specialityEffectSchema.ts";
+export type { SpecialityLevelNamesSchema } from "./zod/specialityLevelNamesSchema.ts";
+export type { SpecialityLevelSchema } from "./zod/specialityLevelSchema.ts";
+export type { SpecialitySchema } from "./zod/specialitySchema.ts";
+export type { StandardBookListItemSchema } from "./zod/standardBookListItemSchema.ts";
+export type { StandardBookSchema } from "./zod/standardBookSchema.ts";
+export type { TargetedTypesSchema } from "./zod/targetedTypesSchema.ts";
 export type {
   UuidForTypeAndNamePathParamsSchema,
   UuidForTypeAndName200Schema,
@@ -178,36 +178,36 @@ export type {
   UuidForTypeAndName400Schema,
   UuidForTypeAndName500Schema,
   UuidForTypeAndNameQueryResponseSchema,
-} from "./zod/uuidForTypeAndNameSchema.js";
-export { valueUnitEnum } from "./types/Buff.js";
-export { buffAttributesEnum } from "./types/BuffAttributes.js";
-export { buffConditionEnum } from "./types/BuffCondition.js";
-export { debuffConditionsEnum } from "./types/DebuffConditions.js";
-export { generalEvaluationTypesEnum } from "./types/GeneralEvaluationTypes.js";
-export { purpleGeneralAscendingLevelsEnum } from "./types/PurpleGeneralAscendingLevels.js";
-export { redGeneralAscendingLevelsEnum } from "./types/RedGeneralAscendingLevels.js";
-export { specialityLevelNamesEnum } from "./types/SpecialityLevelNames.js";
-export { targetedTypesEnum } from "./types/TargetedTypes.js";
-export { ascendingLevelNamesSchema } from "./zod/ascendingLevelNamesSchema.js";
-export { ascendingLevelSchema } from "./zod/ascendingLevelSchema.js";
-export { ascendingSchema } from "./zod/ascendingSchema.js";
-export { ascendingSummarySchema } from "./zod/ascendingSummarySchema.js";
-export { badRequestSchema } from "./zod/badRequestSchema.js";
-export { basicAttributesObjectSchema } from "./zod/basicAttributesObjectSchema.js";
-export { basicAttributesObjectSummarySchema } from "./zod/basicAttributesObjectSummarySchema.js";
-export { basicAttributesSchema } from "./zod/basicAttributesSchema.js";
-export { basicAttributesSummarySchema } from "./zod/basicAttributesSummarySchema.js";
-export { buffAttributesSchema } from "./zod/buffAttributesSchema.js";
-export { buffConditionSchema } from "./zod/buffConditionSchema.js";
-export { buffSchema } from "./zod/buffSchema.js";
-export { builtinBookListObjectSchema } from "./zod/builtinBookListObjectSchema.js";
-export { builtinBookSchema } from "./zod/builtinBookSchema.js";
-export { conditionSchema } from "./zod/conditionSchema.js";
-export { debuffConditionsSchema } from "./zod/debuffConditionsSchema.js";
-export { generalEvaluationTypesSchema } from "./zod/generalEvaluationTypesSchema.js";
-export { generalListItemSchema } from "./zod/generalListItemSchema.js";
-export { generalListSchema } from "./zod/generalListSchema.js";
-export { generalSchema } from "./zod/generalSchema.js";
+} from "./zod/uuidForTypeAndNameSchema.ts";
+export { valueUnitEnum } from "./types/Buff.ts";
+export { buffAttributesEnum } from "./types/BuffAttributes.ts";
+export { buffConditionEnum } from "./types/BuffCondition.ts";
+export { debuffConditionsEnum } from "./types/DebuffConditions.ts";
+export { generalEvaluationTypesEnum } from "./types/GeneralEvaluationTypes.ts";
+export { purpleGeneralAscendingLevelsEnum } from "./types/PurpleGeneralAscendingLevels.ts";
+export { redGeneralAscendingLevelsEnum } from "./types/RedGeneralAscendingLevels.ts";
+export { specialityLevelNamesEnum } from "./types/SpecialityLevelNames.ts";
+export { targetedTypesEnum } from "./types/TargetedTypes.ts";
+export { ascendingLevelNamesSchema } from "./zod/ascendingLevelNamesSchema.ts";
+export { ascendingLevelSchema } from "./zod/ascendingLevelSchema.ts";
+export { ascendingSchema } from "./zod/ascendingSchema.ts";
+export { ascendingSummarySchema } from "./zod/ascendingSummarySchema.ts";
+export { badRequestSchema } from "./zod/badRequestSchema.ts";
+export { basicAttributesObjectSchema } from "./zod/basicAttributesObjectSchema.ts";
+export { basicAttributesObjectSummarySchema } from "./zod/basicAttributesObjectSummarySchema.ts";
+export { basicAttributesSchema } from "./zod/basicAttributesSchema.ts";
+export { basicAttributesSummarySchema } from "./zod/basicAttributesSummarySchema.ts";
+export { buffAttributesSchema } from "./zod/buffAttributesSchema.ts";
+export { buffConditionSchema } from "./zod/buffConditionSchema.ts";
+export { buffSchema } from "./zod/buffSchema.ts";
+export { builtinBookListObjectSchema } from "./zod/builtinBookListObjectSchema.ts";
+export { builtinBookSchema } from "./zod/builtinBookSchema.ts";
+export { conditionSchema } from "./zod/conditionSchema.ts";
+export { debuffConditionsSchema } from "./zod/debuffConditionsSchema.ts";
+export { generalEvaluationTypesSchema } from "./zod/generalEvaluationTypesSchema.ts";
+export { generalListItemSchema } from "./zod/generalListItemSchema.ts";
+export { generalListSchema } from "./zod/generalListSchema.ts";
+export { generalSchema } from "./zod/generalSchema.ts";
 export {
   generalsHtmlListPathParamsSchema,
   generalsHtmlList200Schema,
@@ -215,8 +215,8 @@ export {
   generalsHtmlList400Schema,
   generalsHtmlList500Schema,
   generalsHtmlListQueryResponseSchema,
-} from "./zod/generalsHtmlListSchema.js";
-export { generalSummarySchema } from "./zod/generalSummarySchema.js";
+} from "./zod/generalsHtmlListSchema.ts";
+export { generalSummarySchema } from "./zod/generalSummarySchema.ts";
 export {
   getABookByUuidPathParamsSchema,
   getABookByUuid200Schema,
@@ -225,7 +225,7 @@ export {
   getABookByUuid404Schema,
   getABookByUuid500Schema,
   getABookByUuidQueryResponseSchema,
-} from "./zod/getABookByUuidSchema.js";
+} from "./zod/getABookByUuidSchema.ts";
 export {
   getAllBooksPathParamsSchema,
   getAllBooks200Schema,
@@ -233,7 +233,7 @@ export {
   getAllBooks400Schema,
   getAllBooks500Schema,
   getAllBooksQueryResponseSchema,
-} from "./zod/getAllBooksSchema.js";
+} from "./zod/getAllBooksSchema.ts";
 export {
   getGeneralByIdPathParamsSchema,
   getGeneralByIdQueryParamsSchema,
@@ -242,20 +242,20 @@ export {
   getGeneralById404Schema,
   getGeneralById500Schema,
   getGeneralByIdQueryResponseSchema,
-} from "./zod/getGeneralByIdSchema.js";
-export { internalServerErrrorSchema } from "./zod/internalServerErrrorSchema.js";
-export { noContentSchema } from "./zod/noContentSchema.js";
-export { notFoundSchema } from "./zod/notFoundSchema.js";
-export { purpleGeneralAscendingLevelsSchema } from "./zod/purpleGeneralAscendingLevelsSchema.js";
-export { redGeneralAscendingLevelsSchema } from "./zod/redGeneralAscendingLevelsSchema.js";
-export { skinSchema } from "./zod/skinSchema.js";
-export { specialityEffectSchema } from "./zod/specialityEffectSchema.js";
-export { specialityLevelNamesSchema } from "./zod/specialityLevelNamesSchema.js";
-export { specialityLevelSchema } from "./zod/specialityLevelSchema.js";
-export { specialitySchema } from "./zod/specialitySchema.js";
-export { standardBookListItemSchema } from "./zod/standardBookListItemSchema.js";
-export { standardBookSchema } from "./zod/standardBookSchema.js";
-export { targetedTypesSchema } from "./zod/targetedTypesSchema.js";
+} from "./zod/getGeneralByIdSchema.ts";
+export { internalServerErrrorSchema } from "./zod/internalServerErrrorSchema.ts";
+export { noContentSchema } from "./zod/noContentSchema.ts";
+export { notFoundSchema } from "./zod/notFoundSchema.ts";
+export { purpleGeneralAscendingLevelsSchema } from "./zod/purpleGeneralAscendingLevelsSchema.ts";
+export { redGeneralAscendingLevelsSchema } from "./zod/redGeneralAscendingLevelsSchema.ts";
+export { skinSchema } from "./zod/skinSchema.ts";
+export { specialityEffectSchema } from "./zod/specialityEffectSchema.ts";
+export { specialityLevelNamesSchema } from "./zod/specialityLevelNamesSchema.ts";
+export { specialityLevelSchema } from "./zod/specialityLevelSchema.ts";
+export { specialitySchema } from "./zod/specialitySchema.ts";
+export { standardBookListItemSchema } from "./zod/standardBookListItemSchema.ts";
+export { standardBookSchema } from "./zod/standardBookSchema.ts";
+export { targetedTypesSchema } from "./zod/targetedTypesSchema.ts";
 export {
   uuidForTypeAndNamePathParamsSchema,
   uuidForTypeAndName200Schema,
@@ -263,4 +263,4 @@ export {
   uuidForTypeAndName400Schema,
   uuidForTypeAndName500Schema,
   uuidForTypeAndNameQueryResponseSchema,
-} from "./zod/uuidForTypeAndNameSchema.js";
+} from "./zod/uuidForTypeAndNameSchema.ts";

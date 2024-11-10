@@ -1,4 +1,4 @@
-import type { SpecialityLevelNames } from "../types/SpecialityLevelNames.js";
+import type { SpecialityLevelNames } from "../types/SpecialityLevelNames.ts";
 import { z } from "zod";
 
 export const specialityLevelNamesSchema = z

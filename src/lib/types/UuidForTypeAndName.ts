@@ -1,4 +1,4 @@
-import type { GeneralEvaluationTypes } from "./GeneralEvaluationTypes.js";
+import type { GeneralEvaluationTypes } from "./GeneralEvaluationTypes.ts";
 
 export type UuidForTypeAndNamePathParams = {
   /**

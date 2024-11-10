@@ -1,6 +1,6 @@
-import type { Ascending } from "../types/Ascending.js";
-import { ascendingLevelNamesSchema } from "./ascendingLevelNamesSchema.js";
-import { ascendingLevelSchema } from "./ascendingLevelSchema.js";
+import type { Ascending } from "../types/Ascending.ts";
+import { ascendingLevelNamesSchema } from "./ascendingLevelNamesSchema.ts";
+import { ascendingLevelSchema } from "./ascendingLevelSchema.ts";
 import { z } from "zod";
 
 /**

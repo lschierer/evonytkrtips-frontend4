@@ -6,10 +6,10 @@ import type {
   GetGeneralById404,
   GetGeneralById500,
   GetGeneralByIdQueryResponse,
-} from "../types/GetGeneralById.js";
-import { ascendingLevelNamesSchema } from "./ascendingLevelNamesSchema.js";
-import { generalSchema } from "./generalSchema.js";
-import { specialityLevelNamesSchema } from "./specialityLevelNamesSchema.js";
+} from "../types/GetGeneralById.ts";
+import { ascendingLevelNamesSchema } from "./ascendingLevelNamesSchema.ts";
+import { generalSchema } from "./generalSchema.ts";
+import { specialityLevelNamesSchema } from "./specialityLevelNamesSchema.ts";
 import { z } from "zod";
 
 export const getGeneralByIdPathParamsSchema = z.object({

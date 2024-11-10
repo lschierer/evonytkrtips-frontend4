@@ -1,4 +1,4 @@
-import type { BasicAttributesObjectSummary } from "./BasicAttributesObjectSummary.js";
+import type { BasicAttributesObjectSummary } from "./BasicAttributesObjectSummary.ts";
 
 /**
  * @description A summary of the values that the basic attributes have at a particular level, after they have been computed for that level.

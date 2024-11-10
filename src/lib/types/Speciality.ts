@@ -1,5 +1,5 @@
-import type { SpecialityLevel } from "./SpecialityLevel.js";
-import type { SpecialityLevelNames } from "./SpecialityLevelNames.js";
+import type { SpecialityLevel } from "./SpecialityLevel.ts";
+import type { SpecialityLevelNames } from "./SpecialityLevelNames.ts";
 
 export type Speciality = {
   /**

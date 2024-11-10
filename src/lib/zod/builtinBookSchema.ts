@@ -1,5 +1,5 @@
-import type { BuiltinBook } from "../types/BuiltinBook.js";
-import { buffSchema } from "./buffSchema.js";
+import type { BuiltinBook } from "../types/BuiltinBook.ts";
+import { buffSchema } from "./buffSchema.ts";
 import { z } from "zod";
 
 /**

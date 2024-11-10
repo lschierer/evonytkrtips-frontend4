@@ -1,14 +1,14 @@
-import type { General } from "../types/General.js";
-import { ascendingSchema } from "./ascendingSchema.js";
-import { ascendingSummarySchema } from "./ascendingSummarySchema.js";
-import { basicAttributesSchema } from "./basicAttributesSchema.js";
-import { basicAttributesSummarySchema } from "./basicAttributesSummarySchema.js";
-import { builtinBookSchema } from "./builtinBookSchema.js";
-import { generalEvaluationTypesSchema } from "./generalEvaluationTypesSchema.js";
-import { skinSchema } from "./skinSchema.js";
-import { specialityEffectSchema } from "./specialityEffectSchema.js";
-import { specialitySchema } from "./specialitySchema.js";
-import { standardBookSchema } from "./standardBookSchema.js";
+import type { General } from "../types/General.ts";
+import { ascendingSchema } from "./ascendingSchema.ts";
+import { ascendingSummarySchema } from "./ascendingSummarySchema.ts";
+import { basicAttributesSchema } from "./basicAttributesSchema.ts";
+import { basicAttributesSummarySchema } from "./basicAttributesSummarySchema.ts";
+import { builtinBookSchema } from "./builtinBookSchema.ts";
+import { generalEvaluationTypesSchema } from "./generalEvaluationTypesSchema.ts";
+import { skinSchema } from "./skinSchema.ts";
+import { specialityEffectSchema } from "./specialityEffectSchema.ts";
+import { specialitySchema } from "./specialitySchema.ts";
+import { standardBookSchema } from "./standardBookSchema.ts";
 import { z } from "zod";
 
 export const generalSchema = z.object({

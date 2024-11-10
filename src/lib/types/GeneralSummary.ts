@@ -1,4 +1,4 @@
-import type { GeneralEvaluationTypes } from "./GeneralEvaluationTypes.js";
+import type { GeneralEvaluationTypes } from "./GeneralEvaluationTypes.ts";
 
 /**
  * @description The minimal information necessary to find a General

@@ -1,4 +1,4 @@
-import type { BuffCondition } from "../types/BuffCondition.js";
+import type { BuffCondition } from "../types/BuffCondition.ts";
 import { z } from "zod";
 
 /**

@@ -1,13 +1,13 @@
-import type { Ascending } from "./Ascending.js";
-import type { AscendingSummary } from "./AscendingSummary.js";
-import type { BasicAttributes } from "./BasicAttributes.js";
-import type { BasicAttributesSummary } from "./BasicAttributesSummary.js";
-import type { BuiltinBook } from "./BuiltinBook.js";
-import type { GeneralEvaluationTypes } from "./GeneralEvaluationTypes.js";
-import type { Skin } from "./Skin.js";
-import type { Speciality } from "./Speciality.js";
-import type { SpecialityEffect } from "./SpecialityEffect.js";
-import type { StandardBook } from "./StandardBook.js";
+import type { Ascending } from "./Ascending.ts";
+import type { AscendingSummary } from "./AscendingSummary.ts";
+import type { BasicAttributes } from "./BasicAttributes.ts";
+import type { BasicAttributesSummary } from "./BasicAttributesSummary.ts";
+import type { BuiltinBook } from "./BuiltinBook.ts";
+import type { GeneralEvaluationTypes } from "./GeneralEvaluationTypes.ts";
+import type { Skin } from "./Skin.ts";
+import type { Speciality } from "./Speciality.ts";
+import type { SpecialityEffect } from "./SpecialityEffect.ts";
+import type { StandardBook } from "./StandardBook.ts";
 
 export type General = {
   /**

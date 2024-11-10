@@ -1,4 +1,4 @@
-import type { StandardBookListItem } from "../types/StandardBookListItem.js";
+import type { StandardBookListItem } from "../types/StandardBookListItem.ts";
 import { z } from "zod";
 
 /**

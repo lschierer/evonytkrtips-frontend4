@@ -1,5 +1,5 @@
-import type { GeneralSummary } from "../types/GeneralSummary.js";
-import { generalEvaluationTypesSchema } from "./generalEvaluationTypesSchema.js";
+import type { GeneralSummary } from "../types/GeneralSummary.ts";
+import { generalEvaluationTypesSchema } from "./generalEvaluationTypesSchema.ts";
 import { z } from "zod";
 
 /**

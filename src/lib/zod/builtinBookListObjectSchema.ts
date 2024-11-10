@@ -1,4 +1,4 @@
-import type { BuiltinBookListObject } from "../types/BuiltinBookListObject.js";
+import type { BuiltinBookListObject } from "../types/BuiltinBookListObject.ts";
 import { z } from "zod";
 
 /**

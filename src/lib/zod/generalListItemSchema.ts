@@ -1,4 +1,4 @@
-import type { GeneralListItem } from "../types/GeneralListItem.js";
+import type { GeneralListItem } from "../types/GeneralListItem.ts";
 import { z } from "zod";
 
 export const generalListItemSchema = z.object({

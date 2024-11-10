@@ -5,8 +5,8 @@ import type {
   GeneralsHtmlList400,
   GeneralsHtmlList500,
   GeneralsHtmlListQueryResponse,
-} from "../types/GeneralsHtmlList.js";
-import { generalListSchema } from "./generalListSchema.js";
+} from "../types/GeneralsHtmlList.ts";
+import { generalListSchema } from "./generalListSchema.ts";
 import { z } from "zod";
 
 export const generalsHtmlListPathParamsSchema = z.object({

@@ -1,4 +1,4 @@
-import type { PurpleGeneralAscendingLevels } from "../types/PurpleGeneralAscendingLevels.js";
+import type { PurpleGeneralAscendingLevels } from "../types/PurpleGeneralAscendingLevels.ts";
 import { z } from "zod";
 
 /**

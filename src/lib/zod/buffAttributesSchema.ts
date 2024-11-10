@@ -1,4 +1,4 @@
-import type { BuffAttributes } from "../types/BuffAttributes.js";
+import type { BuffAttributes } from "../types/BuffAttributes.ts";
 import { z } from "zod";
 
 export const buffAttributesSchema = z.enum([

@@ -1,6 +1,6 @@
-import type { AscendingSummary } from "../types/AscendingSummary.js";
-import { ascendingLevelNamesSchema } from "./ascendingLevelNamesSchema.js";
-import { buffSchema } from "./buffSchema.js";
+import type { AscendingSummary } from "../types/AscendingSummary.ts";
+import { ascendingLevelNamesSchema } from "./ascendingLevelNamesSchema.ts";
+import { buffSchema } from "./buffSchema.ts";
 import { z } from "zod";
 
 /**

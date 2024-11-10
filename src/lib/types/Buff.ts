@@ -1,6 +1,6 @@
-import type { BuffAttributes } from "./BuffAttributes.js";
-import type { Condition } from "./Condition.js";
-import type { TargetedTypes } from "./TargetedTypes.js";
+import type { BuffAttributes } from "./BuffAttributes.ts";
+import type { Condition } from "./Condition.ts";
+import type { TargetedTypes } from "./TargetedTypes.ts";
 
 export const valueUnitEnum = {
   flat: "flat",

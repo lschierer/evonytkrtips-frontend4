@@ -1,4 +1,4 @@
-import type { NotFound } from "../types/NotFound.js";
+import type { NotFound } from "../types/NotFound.ts";
 import { z } from "zod";
 
 export const notFoundSchema = z.object({

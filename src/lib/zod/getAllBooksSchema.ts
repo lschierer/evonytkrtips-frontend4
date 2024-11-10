@@ -5,9 +5,9 @@ import type {
   GetAllBooks400,
   GetAllBooks500,
   GetAllBooksQueryResponse,
-} from "../types/GetAllBooks.js";
-import { builtinBookListObjectSchema } from "./builtinBookListObjectSchema.js";
-import { standardBookListItemSchema } from "./standardBookListItemSchema.js";
+} from "../types/GetAllBooks.ts";
+import { builtinBookListObjectSchema } from "./builtinBookListObjectSchema.ts";
+import { standardBookListItemSchema } from "./standardBookListItemSchema.ts";
 import { z } from "zod";
 
 export const getAllBooksPathParamsSchema = z.object({

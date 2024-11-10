@@ -1,5 +1,5 @@
-import type { GeneralEvaluationTypes } from "./GeneralEvaluationTypes.js";
-import type { GeneralListItem } from "./GeneralListItem.js";
+import type { GeneralEvaluationTypes } from "./GeneralEvaluationTypes.ts";
+import type { GeneralListItem } from "./GeneralListItem.ts";
 
 export type GeneralList = {
   /**

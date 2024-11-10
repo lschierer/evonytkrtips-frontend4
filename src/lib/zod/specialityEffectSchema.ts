@@ -1,6 +1,6 @@
-import type { SpecialityEffect } from "../types/SpecialityEffect.js";
-import { buffSchema } from "./buffSchema.js";
-import { specialityLevelNamesSchema } from "./specialityLevelNamesSchema.js";
+import type { SpecialityEffect } from "../types/SpecialityEffect.ts";
+import { buffSchema } from "./buffSchema.ts";
+import { specialityLevelNamesSchema } from "./specialityLevelNamesSchema.ts";
 import { z } from "zod";
 
 /**

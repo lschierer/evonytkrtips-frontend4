@@ -1,6 +1,6 @@
-import type { Condition } from "../types/Condition.js";
-import { buffConditionSchema } from "./buffConditionSchema.js";
-import { debuffConditionsSchema } from "./debuffConditionsSchema.js";
+import type { Condition } from "../types/Condition.ts";
+import { buffConditionSchema } from "./buffConditionSchema.ts";
+import { debuffConditionsSchema } from "./debuffConditionsSchema.ts";
 import { z } from "zod";
 
 /**
