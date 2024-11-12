@@ -11,7 +11,13 @@ import { customElement, property, state } from "lit/decorators.js";
 import { createRef, ref, type Ref } from "lit/directives/ref.js";
 import TabulatorCSS from "../../styles/tabulator.css" with { type: "css" };
 
-import { Tabulator } from "tabulator-tables";
+import { Tabulator, AjaxModule } from "tabulator-tables";
+
+import {
+  type GeneralListSchema,
+  type GeneralSchema,
+  type BasicAttributesSummarySchema,
+} from "../../lib/index.ts";
 
 const DEBUG = true;
 const DEBUGT = false;
@@ -20,32 +26,6 @@ const DEBUGT = false;
 export default class TabulatorElement extends LitElement {
   private tableDivRef: Ref<HTMLDivElement> = createRef();
 
-  static tabledata = [
-    { id: 1, name: "Oli Bob", age: "12", col: "red", dob: "" },
-    { id: 2, name: "Mary May", age: "1", col: "blue", dob: "14/05/1982" },
-    {
-      id: 3,
-      name: "Christine Lobowski",
-      age: "42",
-      col: "green",
-      dob: "22/05/1982",
-    },
-    {
-      id: 4,
-      name: "Brendon Philips",
-      age: "125",
-      col: "orange",
-      dob: "01/08/1980",
-    },
-    {
-      id: 5,
-      name: "Margret Marmajuke",
-      age: "16",
-      col: "yellow",
-      dob: "31/01/1999",
-    },
-  ];
-
   @state()
   private table: Tabulator | null = null;
 
@@ -53,7 +33,55 @@ export default class TabulatorElement extends LitElement {
     super.updated(_changedProperties);
     if (this.table == null) {
       this.renderTable();
+      if (this.table != null) {
+        (this.table as Tabulator).on("tableBuilt", () => {
+          if (DEBUG) {
+            console.log(`TabulatorElement tableBuilt callback`);
+          }
+          this.table?.setData();
+        });
+      }
     }
+  }
+
+  private formatGeneralsResponse(
+    url: string,
+    params: any,
+    response: GeneralListSchema[]
+  ) {
+    if (DEBUG) {
+      console.log(`TabulatorElement formatGeneralsResponse function`);
+    }
+    const returnable = Array<GeneralSchema>();
+    response.forEach((r) => {
+      const type = r.type;
+      r.members.forEach((m) => {
+        if (m.id !== undefined) {
+          returnable.push({
+            name: m.name,
+            id: m.id,
+            type: type,
+            ascending: false,
+            basicAttributes: {
+              attack: {
+                total: 0,
+              },
+              defense: {
+                total: 0,
+              },
+              leadership: {
+                total: 0,
+              },
+              politics: {
+                total: 0,
+              },
+            },
+            builtInBook: "",
+            specialities: [""],
+          });
+        }
+      });
+    });
   }
 
   private renderTable() {
@@ -62,7 +90,10 @@ export default class TabulatorElement extends LitElement {
 
       if (this.table == null) {
         this.table = new Tabulator(div, {
-          data: TabulatorElement.tabledata,
+          ajaxURL: "http://localhost:3000/generals.json",
+          ajaxConfig: "GET",
+          ajaxResponse: this.formatGeneralsResponse,
+          progressiveLoad: "load",
           debugInvalidOptions: DEBUGT,
           debugEventsExternal: DEBUGT,
           columnHeaderSortMulti: true,
@@ -70,21 +101,16 @@ export default class TabulatorElement extends LitElement {
             tooltip: true, //show tool tips on cells
             headerHozAlign: "center",
           },
-          layout: "fitColumns",
+          layout: "fitDataTable",
           columns: [
-            { title: "Name", field: "name", width: 250 },
             {
-              title: "Age",
-              field: "age",
-              hozAlign: "left",
-              formatter: "progress",
+              title: "Name",
+              field: "name",
+              width: 250,
             },
-            { title: "Favourite Color", field: "col" },
             {
-              title: "Date Of Birth",
-              field: "dob",
-              sorter: "date",
-              hozAlign: "center",
+              title: "Type",
+              field: "type",
             },
           ],
         });
