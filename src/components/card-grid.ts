@@ -1,47 +1,55 @@
-import { LitElement, html } from "lit";
+import { html, LitElement, css, type TemplateResult, nothing } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
 const DEBUG = 1;
 
-type Section = {
+/*
+ * This is intended as base class to be extended by one that simply implements a
+ * constructor providing the secctions.
+ * Because I'm using a complex object as the property type, it is almost useless on its own.
+ */
+
+export type CardDetails = {
   title: string;
   name: string;
   description?: string;
+  target?: string;
 };
 
-export const isolation = true;
-export const hydration = true;
-export const prerender = false;
-
 @customElement("card-grid")
-export default class CardGrid extends LitElement {
+export class CardGrid extends LitElement {
   @property()
-  public sections: Section[] = new Array<Section>();
+  public gridCards: CardDetails[] = new Array<CardDetails>();
 
-  protected createRenderRoot() {
-    return this;
-  }
+  static styles = css`
+    .cardGrid {
+      display: flex;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      gap: 2rem;
+    }
+  `;
 
   protected render() {
     if (DEBUG) {
-      console.log(`SplashCardGrid render start`);
+      console.log(`CardGrid render start`);
+    }
+    const cardTemplates = new Array<TemplateResult>();
+    if (this.gridCards.length > 0) {
+      this.gridCards.map((section) => {
+        cardTemplates.push(html`
+          <horizontal-card
+            title="${section.title}"
+            iconName="${section.name}"
+            iconHeight="1.2rem"
+            iconWidth="1.2rem"
+            description="${section.description ?? nothing}"
+            targetLocation=${section.target ?? nothing}
+          ></horizontal-card>
+        `);
+      });
     }
 
-    return html`
-      <div class="cardGrid" role="grid">
-        ${this.sections.length > 0 &&
-        this.sections.map((section) => {
-          return html`
-            <horizontal-card
-              cardtitle="${section.title}"
-              iconName="${section.name}"
-              iconHeight="1.2rem"
-              iconWidth="1.2rem"
-              description="${section.description ? section.description : ""} "
-            ></horizontal-card>
-          `;
-        })}
-      </div>
-    `;
+    return html` <div class="cardGrid" role="grid">${cardTemplates}</div> `;
   }
 }

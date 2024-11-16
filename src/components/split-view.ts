@@ -1,20 +1,11 @@
-import {
-  LitElement,
-  html,
-  css,
-  unsafeCSS,
-  nothing,
-  type CSSResultArray,
-  type TemplateResult,
-  type PropertyValues,
-} from "lit";
+import { LitElement, html, css, type PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { ref } from "lit/directives/ref.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import SpectrumSplitView from "/node_modules/@spectrum-css/splitview/dist/index.css" with { type: "css" };
 
-const DEBUG = 1;
+const DEBUG = 0;
 
 @customElement("split-view")
 export default class SplitView extends LitElement {
@@ -25,7 +16,7 @@ export default class SplitView extends LitElement {
     if (DEBUG) {
       console.log(`grabbed called`);
     }
-    let mouse_is_down = false;
+    this.mouse_is_down = false;
     if (grabber !== undefined) {
       if (DEBUG) {
         console.log(`grabbed has grabber`);
@@ -63,7 +54,7 @@ export default class SplitView extends LitElement {
     super.willUpdate(_changedProperties);
     if (DEBUG) {
       console.log(
-        `SplitView willUpdate ${Object.keys(_changedProperties).join(" ")}`
+        `SplitView willUpdate ${Object.keys(_changedProperties).join(" ")}`,
       );
     }
   }

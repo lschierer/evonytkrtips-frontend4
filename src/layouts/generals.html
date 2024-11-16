@@ -7,10 +7,6 @@
   <head>
     <meta property="og:title" content="${globalThis.page.title}" />
     <meta property="og:site_name" content="Evony TKR Tips" />
-    <link
-      rel="stylesheet"
-      href="/node_modules/@spectrum-css/splitview/dist/index.css"
-    />
     <script
       type="module"
       data-gwd-opt="default"
@@ -20,6 +16,16 @@
       type="module"
       data-gwd-opt="default"
       src="/components/side-nav.ts"
+    ></script>
+    <script
+      type="module"
+      data-gwd-opt="default"
+      src="/components/collection-cards.ts"
+    ></script>
+    <script
+      type="module"
+      data-gwd-opt="default"
+      src="/components/horizontal-card.ts"
     ></script>
     <link rel="stylesheet" href="/styles/generals.css" />
   </head>
@@ -31,6 +37,8 @@
       </div>
       <main slot="right">
         <content-outlet></content-outlet>
+        <hr />
+        <collection-cardgrid collection="Generals"></collection-cardgrid>
       </main>
     </split-view>
   </body>

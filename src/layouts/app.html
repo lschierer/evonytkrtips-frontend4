@@ -1,6 +1,9 @@
 <html lang="en" dir="ltr" class="spectrum spectrum--medium spectrum--light">
   <head>
     <title>Evony TKR Tips</title>
+    <meta name="google-adsense-account" content="ca-pub-8360834774752607" />
+    <meta property="og:title" content="${globalThis.page.title}" />
+    <meta property="og:site_name" content="Evony TKR Tips" />
 
     <link rel="stylesheet" href="/styles/theme.css" />
     <link rel="stylesheet" href="/styles/Spectrum.css" />
@@ -12,12 +15,18 @@
     <script
       type="module"
       data-gwd-opt="default"
-      src="/components/header.ts"
+      src="/components/top-nav.ts"
+    ></script>
+    <script
+      type="module"
+      data-gwd-opt="none"
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8360834774752607"
+      defer
     ></script>
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   </head>
   <body>
-    <app-header></app-header>
+    <top-nav></top-nav>
     <page-outlet></page-outlet>
     <app-footer></app-footer>
   </body>
