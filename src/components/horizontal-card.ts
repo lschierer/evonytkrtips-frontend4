@@ -64,7 +64,7 @@ class HorizontalCard extends LitElement {
       console.log(
         `_changedProperties has ${Object.keys(_changedProperties).join(" ")}`
       );
-      console.log(`title is ${this.cardTitle}`);
+      console.log(`HorizontalCard willUpdate title is ${this.cardTitle}`);
     }
     if (_changedProperties.has("targetLocation")) {
       if (DEBUG) {

@@ -1,3 +1,4 @@
+import { type TemplateResult, css, html, nothing } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { getContentByCollection } from "@greenwood/cli/src/data/client.js";
 
@@ -6,6 +7,7 @@ import { CardGrid } from "./card-grid.ts";
 import { type Page, sortPages } from "../lib/greenwoodPages.ts";
 import type { PropertyValues } from "lit";
 import { type CardDetails } from "./card-grid.ts";
+
 const DEBUG = true;
 
 @customElement("collection-cardgrid")
@@ -20,14 +22,22 @@ export default class ColletionCardGrid extends CardGrid {
       this.updateSections();
     } else {
       if (DEBUG) {
-        console.log(`Collection '${this.collection}' is empty at construction`);
+        console.log(`Collection is empty at construction`);
       }
     }
   }
 
-  protected async willUpdate(_changedProperties: PropertyValues): void {
+  protected async willUpdate(_changedProperties: PropertyValues) {
+    if (DEBUG) {
+      console.log(`ColletionCardGrid willUpdate start`);
+    }
     super.willUpdate(_changedProperties);
     if (_changedProperties.has("collection")) {
+      if (DEBUG) {
+        console.log(
+          `ColletionCardGrid willUpdate has _changedProperties collection`
+        );
+      }
       await this.updateSections();
     }
   }
@@ -37,29 +47,35 @@ export default class ColletionCardGrid extends CardGrid {
       console.log(`ColletionCardGrid updateSections start`);
     }
     if (this.collection.length > 0) {
-      const collectionData: Page[] = (
-        await getContentByCollection(this.collection)
-      ).sort((a: Page, b: Page) => sortPages(a, b));
-
-      if (collectionData.length > 0) {
-        this.gridCards = new Array<CardDetails>();
-        collectionData.map((page) => {
-          if (DEBUG) {
-            console.log(`card with title ${page.title}, route ${page.route}`);
-          }
-          this.gridCards.push({
-            title: (page.title as string) ?? page.label.replace("-", " "),
-            target: page.route as string,
-            description: (page.data!.description as string) ?? "",
-            name: "dashicons:text-page",
-          });
-        });
-        this.requestUpdate("gridsections");
-      } else {
+      if (DEBUG) {
         console.log(
-          `Collection '${this.collection}' is empty in updateSections`
+          `ColletionCardGrid updateSections has collection '${this.collection}'`
         );
       }
+      (await getContentByCollection(this.collection))
+        .sort((a: Page, b: Page) => sortPages(a, b))
+        .map((page: Page) => {
+          if (page === undefined) {
+            console.warn(
+              `found undefined page in collection '${this.collection}'`
+            );
+          } else {
+            if (DEBUG) {
+              console.log(`page data structure '${JSON.stringify(page)}`);
+              console.log(`card with title ${page.title}, route ${page.route}`);
+            }
+            this.gridCards.push({
+              title: (page.title as string) ?? page.label.replace("-", " "),
+              target: page.route as string,
+              description: (page.data!.description as string) ?? "",
+              name: "dashicons:text-page",
+            });
+          }
+        });
+      if (DEBUG) {
+        console.log(`this.gridCards now has length ${this.gridCards.length}`);
+      }
+      this.requestUpdate("gridCards");
     } else {
       if (DEBUG) {
         console.log(
@@ -70,7 +86,105 @@ export default class ColletionCardGrid extends CardGrid {
   }
 
   async connectedCallback() {
+    if (DEBUG) {
+      console.log(`ColletionCardGrid connectedCallback start`);
+    }
     super.connectedCallback();
+    if (this.collection.length > 0) {
+      if (DEBUG) {
+        console.log(
+          `ColletionCardGrid connectedCallback collection is '${this.collection}'`
+        );
+      }
+    }
     await this.updateSections();
+  }
+
+  static localStyles = css`
+    :host {
+      height: 60vh;
+      display: block;
+    }
+    .cardGrid {
+      height: 100%;
+      width: 100%;
+      display: flex;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .cardGrid1,
+    .cardGrid2 {
+      height: 100%;
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+    }
+    .cardGrid1 {
+      justify-content: space-between;
+    }
+
+    .cardGrid2 {
+      justify-content: space-evenly;
+    }
+
+    horizontal-card {
+      width: max-content;
+      height: max-content;
+    }
+  `;
+  static styles = [...super.styles, ColletionCardGrid.localStyles];
+
+  protected render() {
+    if (DEBUG) {
+      console.log(`CardGrid render start`);
+    }
+    const cardTemplates1 = new Array<TemplateResult>();
+    const cardTemplates2 = new Array<TemplateResult>();
+    if (this.gridCards.length > 0) {
+      this.gridCards
+        .sort((a, b) => {
+          return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+        })
+        .map((page, index) => {
+          const pick = index % 2;
+          if (DEBUG) {
+            console.log(`pick '${pick} for index ${index}`);
+          }
+          if (!pick) {
+            cardTemplates1.push(html`
+              <horizontal-card
+                cardTitle="${page.title}"
+                iconName="${page.name}"
+                iconHeight="1.2rem"
+                iconWidth="1.2rem"
+                description="${page.description ?? nothing}"
+                targetLocation=${page.target ?? nothing}
+              ></horizontal-card>
+            `);
+          } else {
+            cardTemplates2.push(html`
+              <horizontal-card
+                cardTitle="${page.title}"
+                iconName="${page.name}"
+                iconHeight="1.2rem"
+                iconWidth="1.2rem"
+                description="${page.description ?? nothing}"
+                targetLocation=${page.target ?? nothing}
+              ></horizontal-card>
+            `);
+          }
+        });
+    }
+
+    return html`
+      <div class="cardGrid" role="grid">
+        <div class="cardGrid1">${cardTemplates1}</div>
+        <div class="cardGrid2">${cardTemplates2}</div>
+      </div>
+    `;
   }
 }

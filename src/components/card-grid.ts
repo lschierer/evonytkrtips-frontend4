@@ -21,7 +21,7 @@ export class CardGrid extends LitElement {
   @property()
   public gridCards: CardDetails[] = new Array<CardDetails>();
 
-  static styles = css`
+  static localStyles = css`
     .cardGrid {
       display: flex;
       flex-wrap: wrap;
@@ -29,6 +29,8 @@ export class CardGrid extends LitElement {
       gap: 2rem;
     }
   `;
+
+  static styles = [CardGrid.localStyles];
 
   protected render() {
     if (DEBUG) {
@@ -39,7 +41,7 @@ export class CardGrid extends LitElement {
       this.gridCards.map((section) => {
         cardTemplates.push(html`
           <horizontal-card
-            title="${section.title}"
+            cardTitle="${section.title}"
             iconName="${section.name}"
             iconHeight="1.2rem"
             iconWidth="1.2rem"

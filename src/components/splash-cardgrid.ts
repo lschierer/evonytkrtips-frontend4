@@ -1,4 +1,4 @@
-import CardGrid from "./card-grid.ts";
+import { CardGrid } from "./card-grid.ts";
 
 const DEBUG = 0;
 
@@ -8,7 +8,7 @@ export default class SplashCardGrid extends CardGrid {
     if (DEBUG) {
       console.log(`SplashCardGrid constructor`);
     }
-    this.sections = [
+    this.gridCards = [
       {
         title: "Generals",
         name: "healthicons:officer-outline",
