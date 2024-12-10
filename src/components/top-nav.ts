@@ -1,4 +1,4 @@
-import { html, css, LitElement, type PropertyValues } from "lit-element";
+import { html, css, type PropertyValues } from "lit-element";
 import { customElement, property } from "lit-element/decorators.js";
 
 import { TopLevelSections } from "../lib/topLevelSections.ts";
@@ -32,16 +32,16 @@ export default class SPTopNav extends TopNav {
 
   connectedCallback(): void {
     super.connectedCallback();
+  }
 
-    this.addEventListener("change", (e: Event) => {
-      const value = (e.target as ActionMenu).value;
-      if (value !== undefined && value !== null && value.length > 0) {
-        console.log(`SPTopNav change event new value for theme is ${value}`);
-        this.themeValue = (e.target as ActionMenu).value;
-      } else {
-        console.log(`SPTopNav change event invalid value`);
-      }
-    });
+  private themeMenuChangeHandler(e: Event) {
+    const value = (e.target as ActionMenu).value;
+    if (value !== undefined && value !== null && value.length > 0) {
+      console.log(`SPTopNav change event new value for theme is ${value}`);
+      this.themeValue = (e.target as ActionMenu).value;
+    } else {
+      console.log(`SPTopNav change event invalid value`);
+    }
   }
 
   private updateTheme = async (color: Color, scale: Scale) => {
@@ -57,6 +57,8 @@ export default class SPTopNav extends TopNav {
           if (themeElement) {
             (themeElement as Theme).color = color;
             (themeElement as Theme).scale = scale;
+          } else {
+            console.log(`updateTheme cannot find theme element`);
           }
         });
       }
@@ -139,12 +141,12 @@ export default class SPTopNav extends TopNav {
       <div id="list">
         <slot @slotchange=${super.onSlotChange}>
           <sp-top-nav-item class="logo" href="/">
-              <img
-                class="logo"
-                src="/assets/TKRTipsLogo.svg"
-                alt="Evony TKR Tips Logo"
-              ></img>
-              <span class="logo">Evony TKR Tips</span>
+            <img
+              class="logo"
+              src="/assets/TKRTipsLogo.svg"
+              alt="Evony TKR Tips Logo"
+            />
+            <span class="logo">Evony TKR Tips</span>
           </sp-top-nav-item>
           ${sections.map((section) => {
             return html`
@@ -165,24 +167,20 @@ export default class SPTopNav extends TopNav {
           quiet
           selects="single"
           value="light"
+          @change=${this.themeMenuChangeHandler}
         >
-          <sp-menu-item value='light'>Light</sp-menu-item>
-          <sp-menu-item value='dark'>Dark</sp-menu-item>
+          <sp-menu-item value="light">Light</sp-menu-item>
+          <sp-menu-item value="dark">Dark</sp-menu-item>
           <sp-menu-divider></sp-menu-divider>
-          <sp-menu-item value='auto'>Auto</sp-menu-item>
+          <sp-menu-item value="auto">Auto</sp-menu-item>
         </sp-action-menu>
 
         <div
           id="selection-indicator"
           class=${ifDefined(this.shouldAnimate ? undefined : "first-position")}
           style=${this.selectionIndicatorStyle}
-        >
-        </div>
+        ></div>
       </div>
-
-
-
-
     `;
   }
 }

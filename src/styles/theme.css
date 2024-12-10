@@ -12,6 +12,10 @@ main {
   margin-left: 8px;
 }
 
+sp-theme {
+  height: 100vh;
+}
+
 div.cardGrid {
   display: grid;
   margin: 2px;
