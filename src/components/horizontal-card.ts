@@ -1,7 +1,7 @@
 import { LitElement, type PropertyValues, css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 
-const DEBUG = 1;
+const DEBUG = false;
 
 import SpectrumCard from "/node_modules/@spectrum-css/card/dist/index.css" with { type: "css" };
 

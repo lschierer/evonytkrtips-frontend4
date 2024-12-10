@@ -8,7 +8,7 @@ import { type Page, sortPages } from "../lib/greenwoodPages.ts";
 import type { PropertyValues } from "lit";
 import { type CardDetails } from "./card-grid.ts";
 
-const DEBUG = true;
+const DEBUG = false;
 
 @customElement("collection-cardgrid")
 export default class ColletionCardGrid extends CardGrid {
@@ -27,7 +27,7 @@ export default class ColletionCardGrid extends CardGrid {
     if (_changedProperties.has("collection")) {
       if (DEBUG) {
         console.log(
-          `ColletionCardGrid willUpdate has _changedProperties collection`,
+          `ColletionCardGrid willUpdate has _changedProperties collection`
         );
       }
       await this.updateSections();
@@ -41,13 +41,16 @@ export default class ColletionCardGrid extends CardGrid {
     if (this.collection.length > 0) {
       if (DEBUG) {
         console.log(
-          `ColletionCardGrid updateSections has collection '${this.collection}'`,
+          `ColletionCardGrid updateSections has collection '${this.collection}'`
         );
       }
       this.gridCards = new Array<CardDetails>();
-      console.log(
-        `after new, this.gridCards has length ${this.gridCards.length}`,
-      );
+      if (DEBUG) {
+        console.log(
+          `after new, this.gridCards has length ${this.gridCards.length}`
+        );
+      }
+
       const routes = new Array<String>();
       await getContentByCollection(this.collection).then((pages: Page[]) =>
         pages
@@ -55,13 +58,13 @@ export default class ColletionCardGrid extends CardGrid {
           .map((page: Page) => {
             if (page === undefined) {
               console.warn(
-                `found undefined page in collection '${this.collection}'`,
+                `found undefined page in collection '${this.collection}'`
               );
             } else {
               if (DEBUG) {
                 //console.log(`page data structure '${JSON.stringify(page)}`);
                 console.log(
-                  `card with title ${page.title}, route ${page.route}`,
+                  `card with title ${page.title}, route ${page.route}`
                 );
               }
               if (!routes.includes(page.route)) {
@@ -81,18 +84,18 @@ export default class ColletionCardGrid extends CardGrid {
                 }
               }
             }
-          }),
+          })
       );
       if (DEBUG) {
         console.log(
-          `after await this.gridCards now has length ${this.gridCards.length} routes is now ${routes.length}`,
+          `after await this.gridCards now has length ${this.gridCards.length} routes is now ${routes.length}`
         );
       }
       this.requestUpdate("gridCards");
     } else {
       if (DEBUG) {
         console.log(
-          `collection is undefined in ColletionCardGrid updateSections`,
+          `collection is undefined in ColletionCardGrid updateSections`
         );
       }
     }
