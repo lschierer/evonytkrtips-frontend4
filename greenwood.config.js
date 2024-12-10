@@ -1,6 +1,5 @@
 import { greenwoodPluginTypeScript } from "@greenwood/plugin-typescript";
 import { greenwoodPluginPostCss } from "@greenwood/plugin-postcss";
-import { greenwoodPluginRendererLit } from "@greenwood/plugin-renderer-lit";
 import { greenwoodPluginGoogleAnalytics } from "@greenwood/plugin-google-analytics";
 
 export default {
@@ -19,9 +18,6 @@ export default {
     greenwoodPluginTypeScript({
       extendConfig: true,
       servePage: "dynamic",
-    }),
-    greenwoodPluginRendererLit({
-      prerender: false,
     }),
     greenwoodPluginPostCss({
       extendConfig: true,
