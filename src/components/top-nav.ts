@@ -44,6 +44,14 @@ export default class SPTopNav extends TopNav {
     }
   }
 
+  private getPreferredColorScheme(): Color {
+    const mm = matchMedia("(prefers-color-scheme: light)").matches
+      ? "light"
+      : "dark";
+    console.log(`getPrefered found ${mm}`);
+    return mm;
+  }
+
   private updateTheme = async (color: Color, scale: Scale) => {
     const colorOptions = ["light", "dark"];
     const scaleOptions = ["medium", "large"];
@@ -76,8 +84,7 @@ export default class SPTopNav extends TopNav {
         this.updateTheme("dark", "medium");
       }
       if (!this.themeValue.toLowerCase().localeCompare("auto")) {
-        const match = window.matchMedia("(prefers-color-scheme: dark)");
-        console.log(`match is ${match}`);
+        this.updateTheme(this.getPreferredColorScheme(), "medium");
       }
     }
   }
