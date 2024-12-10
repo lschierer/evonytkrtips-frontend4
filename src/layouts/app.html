@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="/styles/Spectrum.css" />
     <script
       type="module"
+      data-gwd-opt="none"
+      src="/node_modules/@spectrum-web-components/theme/sp-theme.js"
+    ></script>
+    <script
+      type="module"
+      data-gwd-opt="none"
+      src="/node_modules/@spectrum-web-components/theme/src/themes.js"
+    ></script>
+    <script
+      type="module"
       data-gwd-opt="static"
       src="/components/footer.ts"
     ></script>
@@ -27,8 +37,15 @@
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   </head>
   <body>
-    <top-nav></top-nav>
-    <page-outlet></page-outlet>
-    <app-footer></app-footer>
+    <sp-theme
+      system="spectrum"
+      color="light"
+      scale="medium"
+      style="background-color: var(--spectrum-gray-100)"
+    >
+      <top-nav></top-nav>
+      <page-outlet></page-outlet>
+      <app-footer></app-footer>
+    </sp-theme>
   </body>
 </html>

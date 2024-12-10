@@ -17,14 +17,6 @@ export default class ColletionCardGrid extends CardGrid {
 
   constructor() {
     super();
-
-    if (this.collection.length > 0) {
-      this.updateSections();
-    } else {
-      if (DEBUG) {
-        console.log(`Collection is empty at construction`);
-      }
-    }
   }
 
   protected async willUpdate(_changedProperties: PropertyValues) {
@@ -35,7 +27,7 @@ export default class ColletionCardGrid extends CardGrid {
     if (_changedProperties.has("collection")) {
       if (DEBUG) {
         console.log(
-          `ColletionCardGrid willUpdate has _changedProperties collection`
+          `ColletionCardGrid willUpdate has _changedProperties collection`,
         );
       }
       await this.updateSections();
@@ -49,37 +41,58 @@ export default class ColletionCardGrid extends CardGrid {
     if (this.collection.length > 0) {
       if (DEBUG) {
         console.log(
-          `ColletionCardGrid updateSections has collection '${this.collection}'`
+          `ColletionCardGrid updateSections has collection '${this.collection}'`,
         );
       }
-      (await getContentByCollection(this.collection))
-        .sort((a: Page, b: Page) => sortPages(a, b))
-        .map((page: Page) => {
-          if (page === undefined) {
-            console.warn(
-              `found undefined page in collection '${this.collection}'`
-            );
-          } else {
-            if (DEBUG) {
-              console.log(`page data structure '${JSON.stringify(page)}`);
-              console.log(`card with title ${page.title}, route ${page.route}`);
+      this.gridCards = new Array<CardDetails>();
+      console.log(
+        `after new, this.gridCards has length ${this.gridCards.length}`,
+      );
+      const routes = new Array<String>();
+      await getContentByCollection(this.collection).then((pages: Page[]) =>
+        pages
+          .sort((a: Page, b: Page) => sortPages(a, b))
+          .map((page: Page) => {
+            if (page === undefined) {
+              console.warn(
+                `found undefined page in collection '${this.collection}'`,
+              );
+            } else {
+              if (DEBUG) {
+                //console.log(`page data structure '${JSON.stringify(page)}`);
+                console.log(
+                  `card with title ${page.title}, route ${page.route}`,
+                );
+              }
+              if (!routes.includes(page.route)) {
+                routes.push(page.route);
+                this.gridCards.push({
+                  title: (page.title as string) ?? page.label.replace("-", " "),
+                  target: page.route as string,
+                  description: (page.data!.description as string) ?? "",
+                  name: "dashicons:text-page",
+                });
+                if (DEBUG) {
+                  console.log(`routes is now ${routes.join("; ")}`);
+                }
+              } else {
+                if (DEBUG) {
+                  console.log(`skipping push because route already present`);
+                }
+              }
             }
-            this.gridCards.push({
-              title: (page.title as string) ?? page.label.replace("-", " "),
-              target: page.route as string,
-              description: (page.data!.description as string) ?? "",
-              name: "dashicons:text-page",
-            });
-          }
-        });
+          }),
+      );
       if (DEBUG) {
-        console.log(`this.gridCards now has length ${this.gridCards.length}`);
+        console.log(
+          `after await this.gridCards now has length ${this.gridCards.length} routes is now ${routes.length}`,
+        );
       }
       this.requestUpdate("gridCards");
     } else {
       if (DEBUG) {
         console.log(
-          `collection is undefined in ColletionCardGrid updateSections`
+          `collection is undefined in ColletionCardGrid updateSections`,
         );
       }
     }
@@ -90,14 +103,6 @@ export default class ColletionCardGrid extends CardGrid {
       console.log(`ColletionCardGrid connectedCallback start`);
     }
     super.connectedCallback();
-    if (this.collection.length > 0) {
-      if (DEBUG) {
-        console.log(
-          `ColletionCardGrid connectedCallback collection is '${this.collection}'`
-        );
-      }
-    }
-    await this.updateSections();
   }
 
   static localStyles = css`
@@ -152,7 +157,7 @@ export default class ColletionCardGrid extends CardGrid {
         .map((page, index) => {
           const pick = index % 2;
           if (DEBUG) {
-            console.log(`pick '${pick} for index ${index}`);
+            console.log(`pick '${pick} for index ${index} card ${page.title}`);
           }
           if (!pick) {
             cardTemplates1.push(html`
